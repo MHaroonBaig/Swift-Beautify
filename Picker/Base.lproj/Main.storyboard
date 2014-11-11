@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Picker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="73C-yc-WPa">
+                                <rect key="frame" x="7" y="125" width="600" height="162"/>
+                            </pickerView>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="8Ab-nb-5yl">
+                                <rect key="frame" x="0.0" y="328" width="600" height="162"/>
+                                <date key="date" timeIntervalSinceReferenceDate="436798054.692119">
+                                    <!--2014-11-04 12:47:34 +0000-->
+                                </date>
+                            </datePicker>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="ee9-YQ-l2x">
+                                <rect key="frame" x="-22" y="77" width="622" height="162"/>
+                                <date key="date" timeIntervalSinceReferenceDate="436798267.76296699">
+                                    <!--2014-11-04 12:51:07 +0000-->
+                                </date>
+                            </datePicker>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="LXK-l3-WdN">
+                                <rect key="frame" x="-16" y="56" width="600" height="162"/>
+                                <date key="date" timeIntervalSinceReferenceDate="436798328.05909997">
+                                    <!--2014-11-04 12:52:08 +0000-->
+                                </date>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LMi-7S-pHJ">
+                                <rect key="frame" x="235" y="259" width="130" height="14"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="14" id="imT-RH-AhW"/>
+                                    <constraint firstAttribute="width" constant="130" id="xZb-xo-3Jl"/>
+                                </constraints>
+                                <state key="normal" title="What's the date"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hcr-WQ-Sov">
+                                <rect key="frame" x="277" y="331" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SLC-MP-LGi">
+                                <rect key="frame" x="0.0" y="438" width="600" height="162"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="RRa-ho-it5"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="Cg9-Cr-xsV"/>
+                                </connections>
+                            </pickerView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3aI-Ot-jrf">
+                                <rect key="frame" x="276" y="399" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchStateChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="fU8-fl-j1G"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8TR-BM-FrI">
+                                <rect key="frame" x="16" y="113" width="568" height="58"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="568" id="vhA-i5-slH"/>
+                                    <constraint firstAttribute="height" constant="58" id="zja-NA-q0s"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="45"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999964" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Doo-0h-aYe">
+                                <rect key="frame" x="16" y="179" width="568" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="vBZ-2y-OLh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999964" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nkw-UO-z1K">
+                                <rect key="frame" x="279" y="231" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8TR-BM-FrI" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="19K-ev-KQb"/>
+                            <constraint firstItem="LMi-7S-pHJ" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="2bQ-9G-uBa"/>
+                            <constraint firstItem="Doo-0h-aYe" firstAttribute="trailing" secondItem="8TR-BM-FrI" secondAttribute="trailing" id="2gP-mi-FLO"/>
+                            <constraint firstItem="8TR-BM-FrI" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="93" id="3Ch-7n-Shb"/>
+                            <constraint firstItem="SLC-MP-LGi" firstAttribute="top" secondItem="3aI-Ot-jrf" secondAttribute="bottom" constant="8" symbolic="YES" id="4Ds-BC-QB6"/>
+                            <constraint firstItem="LXK-l3-WdN" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-32" id="84I-v3-yok"/>
+                            <constraint firstItem="Nkw-UO-z1K" firstAttribute="top" secondItem="Doo-0h-aYe" secondAttribute="bottom" constant="8" symbolic="YES" id="BNH-Oz-VVH"/>
+                            <constraint firstItem="Nkw-UO-z1K" firstAttribute="centerX" secondItem="Doo-0h-aYe" secondAttribute="centerX" id="Ihn-sx-Ouu"/>
+                            <constraint firstAttribute="trailing" secondItem="SLC-MP-LGi" secondAttribute="trailing" id="OPQ-iT-7S7"/>
+                            <constraint firstItem="LXK-l3-WdN" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="OiH-5v-Xpd"/>
+                            <constraint firstItem="3aI-Ot-jrf" firstAttribute="centerX" secondItem="SLC-MP-LGi" secondAttribute="centerX" id="Qag-l1-yPz"/>
+                            <constraint firstItem="LXK-l3-WdN" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="36" id="S5r-St-MDA"/>
+                            <constraint firstItem="SLC-MP-LGi" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="Soa-la-Vmp"/>
+                            <constraint firstItem="8TR-BM-FrI" firstAttribute="centerX" secondItem="3aI-Ot-jrf" secondAttribute="centerX" id="Z0V-iw-0wD"/>
+                            <constraint firstItem="SLC-MP-LGi" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="g0Y-sd-tSb"/>
+                            <constraint firstItem="8TR-BM-FrI" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="gh0-Em-AY2"/>
+                            <constraint firstItem="Doo-0h-aYe" firstAttribute="top" secondItem="8TR-BM-FrI" secondAttribute="bottom" constant="8" symbolic="YES" id="ibE-Op-e1C"/>
+                            <constraint firstItem="LMi-7S-pHJ" firstAttribute="top" secondItem="LXK-l3-WdN" secondAttribute="bottom" constant="41" id="kiM-Ch-PtD"/>
+                            <constraint firstItem="Doo-0h-aYe" firstAttribute="leading" secondItem="8TR-BM-FrI" secondAttribute="leading" id="t10-e5-T2l"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="73C-yc-WPa"/>
+                                <exclude reference="8Ab-nb-5yl"/>
+                                <exclude reference="ee9-YQ-l2x"/>
+                                <exclude reference="LXK-l3-WdN"/>
+                                <exclude reference="LMi-7S-pHJ"/>
+                                <exclude reference="hcr-WQ-Sov"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="myBgLabel" destination="Doo-0h-aYe" id="1ft-mV-la0"/>
+                        <outlet property="myLabel" destination="8TR-BM-FrI" id="pNd-8k-eVQ"/>
+                        <outlet property="myLabelRgb" destination="Nkw-UO-z1K" id="UYd-fy-DYJ"/>
+                        <outlet property="myPicker" destination="SLC-MP-LGi" id="zO1-Ot-ink"/>
+                        <outlet property="mySwitch" destination="3aI-Ot-jrf" id="WH3-Y5-fWw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
