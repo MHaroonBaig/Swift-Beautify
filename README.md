@@ -8,3 +8,6 @@ In short, a user can make the interface of his choice.
 ##Screenshots :movie_camera:
 <img src="Screenshots/shot1.png" alt="Launch Screen"> <img src="Screenshots/shot3.png" alt="Launch Screen"> 
 <img src="Screenshots/shot2.png" alt="Launch Screen"> <img src="Screenshots/shot4.png" alt="Launch Screen">
+
+---
+Compiled on Xcode 6.1, Optimised both for iPhones and iPads running iOS 7 or later :yum:
