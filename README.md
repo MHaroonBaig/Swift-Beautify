@@ -15,6 +15,7 @@ In short, a user can make the interface of his own choice :yum:
 - [x] RGB representations of each variation
 - [ ] Dynamic variations in the Font Family
 - [ ] Variations in the Font Style
+- [ ] Default templates
 - [ ] Final animated result when Done
 
 ---
