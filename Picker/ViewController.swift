@@ -126,7 +126,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             
             myBgLabel.text = bgString
             myLabelRgb.text = bgString2
-            message2 = " " // Or else, it'll add up the previous values
+            message2 = " " // Or else, it will add up the previous values
     }
     
     override func viewDidLoad() {
