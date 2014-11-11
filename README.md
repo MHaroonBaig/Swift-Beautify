@@ -10,7 +10,7 @@ In short, a user can make the interface of his own choice :yum:
 <img src="Screenshots/shot2.png" alt="Launch Screen"> <img src="Screenshots/shot4.png" alt="Launch Screen">
 
 ##Features:
-- [x] Flat background coloring variations
+- [x] [Flat] (https://gist.githubusercontent.com/wildlyinaccurate/5137255/raw/ae831aaae8676ba5d7f9cc0fe74cb248562d598c/flat-ui-colours.txt) background coloring variations
 - [x] Font color variations
 - [x] RGB representations of each variation
 - [ ] Dynamic variations in the Font Family
