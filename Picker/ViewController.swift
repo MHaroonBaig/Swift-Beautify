@@ -100,6 +100,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 backupRgbValues[component] = rgbValues[component][row]
                 self.view.backgroundColor = bgColor
                 
+                // If the user has selected a text color and comes back to the background selection, his selection for the text remains the same.
                 if (switchTrigger){
                     myLabel.textColor = txtColor // Main Label
                     myLabelRgb.textColor = txtColor // Label showing RGB values for the main label
@@ -125,7 +126,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             
             myBgLabel.text = bgString
             myLabelRgb.text = bgString2
-            message2 = " "
+            message2 = " " // Or else, it'll add up the previous values
     }
     
     override func viewDidLoad() {
