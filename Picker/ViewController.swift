@@ -29,14 +29,14 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             // The user is changing the color of the label
             for i in 0...2{
                 myPicker.selectRow(backupRgbValuesLabel[i], inComponent:i, animated: true)
-                rgbBackground[i] = backupRgbValuesLabel[i]
+                rgbBackground[i] = backupRgbValuesLabel[i] //So that the color starts changing from the previously selected color after the user switches
             }
         } else {
             switchTrigger = false
             // The user is going to change the color of the Background
             for i in 0...2{
                 myPicker.selectRow(backupRgbValues[i], inComponent:i, animated: true)
-                rgbBackground[i] = backupRgbValues[i]
+                rgbBackground[i] = backupRgbValues[i] // Loading the prevously selected values to start changing from there
             }
         }
     }
@@ -73,7 +73,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         inComponent component: Int) {
             
             // What would happen if the user selects a value?
-            rgbBackground[component] = rgbValues[component][row] // It populates the array which contains the current selecte values for RGBs.
+            rgbBackground[component] = rgbValues[component][row] // Populating the array which contains the current RGB values
             
             // Convert the RGB values to Strings.
             for i in 0...2{
@@ -86,7 +86,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             var green_col: CGFloat = CGFloat(rgbBackground[1])/255.0
             var blue_col: CGFloat = CGFloat(rgbBackground[2])/255.0
             var bgColor = UIColor(red: red_col, green: green_col, blue: blue_col, alpha: 1.0)
-            var txtColor = UIColor(red: 1.0 - red_col, green: 1 - green_col, blue: 1 - blue_col, alpha: 1.0)
+            var txtColor = UIColor(red: 1.0 - red_col, green: 1 - green_col, blue: 1 - blue_col, alpha: 1.0) // Varying color according to the background to make the Text visible
             
             // If the switch is ON, we change the label color.
             if mySwitch.on{
@@ -101,16 +101,16 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 self.view.backgroundColor = bgColor
                 
                 if (switchTrigger){
-                    myLabel.textColor = txtColor
-                    myLabelRgb.textColor = txtColor
-                    myBgLabel.textColor = txtColor
+                    myLabel.textColor = txtColor // Main Label
+                    myLabelRgb.textColor = txtColor // Label showing RGB values for the main label
+                    myBgLabel.textColor = txtColor // Label showing RGB values for the background
                 }
                 
                 bgString = "Background RGB is" + message2
                 
                 if (rgbBackground[0] < 50 && rgbBackground[1] < 50 && rgbBackground[2] < 50){
-                    /* 
-                    The background is too dark when RGB values are below 50, so something has to be done to make the 
+                    /*
+                    The background is too dark when RGB values are below 50, so something has to be done to make the
                     picker view visible
                     */
                     red_col += 50.0/255.0
@@ -133,6 +133,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         myPicker.delegate = self
         myPicker.dataSource = self
         
+        // Populating the RGB values
         for counter in 0...2{
             for i in 1...255{
                 rgbValues[counter].append(i)
