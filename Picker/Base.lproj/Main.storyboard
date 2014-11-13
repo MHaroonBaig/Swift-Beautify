@@ -156,29 +156,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ftW-xx-T4s">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ftW-xx-T4s">
                                 <rect key="frame" x="279" y="173" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oL3-1L-HMD">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oL3-1L-HMD">
                                 <rect key="frame" x="279" y="209" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r0r-Qk-O5p">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r0r-Qk-O5p">
                                 <rect key="frame" x="279" y="246" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q2x-vC-nh7">
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q2x-vC-nh7">
                                 <rect key="frame" x="0.0" y="438" width="600" height="162"/>
                             </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oL3-1L-HMD" firstAttribute="leading" secondItem="r0r-Qk-O5p" secondAttribute="leading" id="5Gw-lf-yRM"/>
+                            <constraint firstItem="r0r-Qk-O5p" firstAttribute="top" secondItem="oL3-1L-HMD" secondAttribute="bottom" constant="16" id="AkR-88-3Jx"/>
+                            <constraint firstItem="ftW-xx-T4s" firstAttribute="top" secondItem="Wia-TW-TbR" secondAttribute="bottom" constant="109" id="MhT-6P-kqy"/>
+                            <constraint firstItem="q2x-vC-nh7" firstAttribute="leading" secondItem="6pc-jw-fsG" secondAttribute="leading" id="Qm9-P8-XCa"/>
+                            <constraint firstItem="ftW-xx-T4s" firstAttribute="leading" secondItem="oL3-1L-HMD" secondAttribute="leading" id="X5W-HA-zFn"/>
+                            <constraint firstItem="r0r-Qk-O5p" firstAttribute="centerX" secondItem="q2x-vC-nh7" secondAttribute="centerX" id="dY0-7F-Z73"/>
+                            <constraint firstItem="q2x-vC-nh7" firstAttribute="bottom" secondItem="NBn-yk-64W" secondAttribute="top" id="hhd-Ph-TFz"/>
+                            <constraint firstItem="oL3-1L-HMD" firstAttribute="top" secondItem="ftW-xx-T4s" secondAttribute="bottom" constant="15" id="pyT-2w-djK"/>
+                            <constraint firstAttribute="trailing" secondItem="q2x-vC-nh7" secondAttribute="trailing" id="wbv-UU-lHL"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xhA-lz-PFa" userLabel="First Responder" sceneMemberID="firstResponder"/>
