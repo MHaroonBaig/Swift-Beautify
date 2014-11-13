@@ -176,6 +176,10 @@
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q2x-vC-nh7">
                                 <rect key="frame" x="0.0" y="438" width="600" height="162"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="AV0-75-ARa" id="WVW-bt-cuU"/>
+                                    <outlet property="delegate" destination="AV0-75-ARa" id="QHB-NZ-Y5I"/>
+                                </connections>
                             </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -194,6 +198,12 @@
                             <constraint firstItem="r0r-Qk-O5p" firstAttribute="top" secondItem="oL3-1L-HMD" secondAttribute="bottom" constant="16" id="sXt-tT-LFh"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="myHeadingLabel" destination="ftW-xx-T4s" id="vck-Xx-gI1"/>
+                        <outlet property="myPickerView2" destination="q2x-vC-nh7" id="Da3-H0-h83"/>
+                        <outlet property="mySecondLabel" destination="oL3-1L-HMD" id="Ep6-uX-K1h"/>
+                        <outlet property="myThirdLabel" destination="r0r-Qk-O5p" id="BAt-Ch-Kpq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xhA-lz-PFa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
