@@ -11,7 +11,7 @@ import UIKit
 class FontStylingsViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
     var data: [[String]] = [[""], [""], ["Regular", "Bold", "Italic"]]
-    var willProcessData: [String] = ["", "", ""]
+    var willProcessData: [String] = ["", "1", ""]
     
     
     @IBOutlet weak var myPickerView2: UIPickerView!
@@ -32,7 +32,9 @@ class FontStylingsViewController: UIViewController, UIPickerViewDataSource, UIPi
         didSelectRow row: Int,
         inComponent component: Int) {
             willProcessData[component] = data[component][row]
-            myHeadingLabel.font = UIFont(name: willProcessData[0], size: 10.0)
+            var someShit = willProcessData[1].toInt()
+            
+            myHeadingLabel.font = UIFont(name: willProcessData[0], size: CGFloat(someShit!) )
     
     
     }
