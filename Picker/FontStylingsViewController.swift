@@ -10,22 +10,34 @@ import UIKit
 
 class FontStylingsViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
-    var data: [[String]] = [[""], [""], ["Regular", "Bold", "Italic"]]
-    var willProcessData: [String] = ["", "1", ""]
+    var data: [[String]] = [[], []]
+    var willProcessData: [String] = ["", "45", ""]
     
+    var pickerBackground2:UIColor!
+    var labelBackgrounfColor: UIColor!
+    var backgroundColor2: UIColor!
     
     @IBOutlet weak var myPickerView2: UIPickerView!
     @IBOutlet weak var myHeadingLabel: UILabel!
     @IBOutlet weak var mySecondLabel: UILabel!
     @IBOutlet weak var myThirdLabel: UILabel!
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
-        return 3
+        return 2
     }
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return data[component].count
     }
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
         return data[component][row]
+    }
+    func pickerView(pickerView: UIPickerView,
+        widthForComponent component: Int) -> CGFloat {
+            if component == 0{
+            return 200.0
+            }
+            else{
+            return 40.0
+            }
     }
     
     func pickerView(pickerView: UIPickerView,
@@ -42,7 +54,7 @@ class FontStylingsViewController: UIViewController, UIPickerViewDataSource, UIPi
     override func viewDidLoad() {
         super.viewDidLoad()
         var fontFamilies = UIFont.familyNames()
-        var fontNames: [String] = [""]
+        var fontNames: [String] = []
        
         for i in fontFamilies{
             var fontNamesForFamilies = UIFont.fontNamesForFamilyName(i as String)
@@ -51,11 +63,16 @@ class FontStylingsViewController: UIViewController, UIPickerViewDataSource, UIPi
             }
         }
         data[0] = fontNames
-       var fontSizes: [String] = [""]
+       var fontSizes: [String] = []
         for i in 1...fontNames.count{
             fontSizes.append(String(i))
         }
         data[1] = fontSizes
+        myPickerView2.backgroundColor = pickerBackground2
+        myHeadingLabel.textColor = labelBackgrounfColor
+        self.view.backgroundColor = backgroundColor2
+        
+       
         
         // Do any additional setup after loading the view.
     }

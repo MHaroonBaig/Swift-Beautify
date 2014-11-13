@@ -17,6 +17,10 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     var backupRgbValues: [Int] = [255,255,255] //For Background RGB values when the switch state is changes
     var backupRgbValuesLabel: [Int] = [255,255,255] // For Label RGB values when the switch state is changed
     
+    var pickerColor: UIColor = UIColor.blackColor()
+    var backgroundColor: UIColor = UIColor.grayColor()
+    var textColor: UIColor = UIColor.blueColor()
+    
     var bgString: String = "" // This is to set the Background RGB label text
     var message2: String = " " //Just a handful string to house all the integer rgb values by converting them into a String
     var bgString2: String = "" // For housing the text color once the switching is done
@@ -94,11 +98,13 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 myLabel.textColor = bgColor
                 myLabelRgb.textColor = bgColor
                 myBgLabel.textColor = bgColor
+                textColor = bgColor
                 bgString2 = "Text RGB is " + message2
             }
             else {
                 backupRgbValues[component] = rgbValues[component][row]
                 self.view.backgroundColor = bgColor
+                backgroundColor = bgColor
                 
                 // If the user has selected a text color and comes back to the background selection, his selection for the text remains the same.
                 if (switchTrigger){
@@ -117,10 +123,12 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                     red_col += 50.0/255.0
                     green_col += 50.0/255.0
                     red_col += 50.0/255.0
+                    pickerColor = UIColor(red: red_col + 3*red_col, green: 3*green_col + green_col, blue: blue_col + 3*blue_col, alpha: 0.3)
                     
-                    myPicker.backgroundColor = UIColor(red: red_col + 3*red_col, green: 3*green_col + green_col, blue: blue_col + 3*blue_col, alpha: 0.3)
+                    myPicker.backgroundColor = pickerColor
                 } else {
-                    myPicker.backgroundColor = UIColor(red: red_col + red_col/3.0, green: green_col + green_col/3.0, blue: blue_col + blue_col/3.0, alpha: 0.5)
+                    pickerColor = UIColor(red: red_col + red_col/3.0, green: green_col + green_col/3.0, blue: blue_col + blue_col/3.0, alpha: 0.5)
+                    myPicker.backgroundColor =    pickerColor
                 }
             }
             
@@ -148,7 +156,12 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         var navigationObject: FontStylingsViewController = segue.destinationViewController as FontStylingsViewController
-    
+        
+        navigationObject.pickerBackground2 = pickerColor
+        navigationObject.labelBackgrounfColor = textColor
+        navigationObject.backgroundColor2 = backgroundColor
+        
+        
         
         
     }
