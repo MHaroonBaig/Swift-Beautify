@@ -13,13 +13,17 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     var rgbValues: [[Int]] = [[0], [0], [0]] // This contains the content of each row of a component. Each row is having numbers ranging from 0 to 255
     var switchTrigger: Bool = true
     
+    var fontFamily = UIFont(name: "STHeitiSC-Medium", size: 45.0)
+    var currentSelection2:Int = 6
+    
+    
     var rgbBackground: [Int] = [255,255,255] // Populated by each component of a picker
-    var backupRgbValues: [Int] = [255,255,255] //For Background RGB values when the switch state is changes
+    var backupRgbValues: [Int] = [0,0,0] //For Background RGB values when the switch state is changes
     var backupRgbValuesLabel: [Int] = [255,255,255] // For Label RGB values when the switch state is changed
     
-    var pickerColor: UIColor = UIColor.blackColor()
-    var backgroundColor: UIColor = UIColor.grayColor()
-    var textColor: UIColor = UIColor.blueColor()
+    var pickerColor: UIColor = UIColor.whiteColor()
+    var backgroundColor: UIColor = UIColor.whiteColor()
+    var textColor: UIColor = UIColor.blackColor()
     
     var bgString: String = "" // This is to set the Background RGB label text
     var message2: String = " " //Just a handful string to house all the integer rgb values by converting them into a String
@@ -27,6 +31,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     @IBOutlet weak var myPicker: UIPickerView!
     @IBOutlet weak var myLabelRgb: UILabel! // Text RGB value
+    
+    
     
     @IBAction func switchStateChanged(sender: UISwitch) {
         if (sender.on){
@@ -141,6 +147,12 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         super.viewDidLoad()
         myPicker.delegate = self
         myPicker.dataSource = self
+        myLabel.font = fontFamily
+        myLabel.textColor = textColor
+        myLabelRgb.textColor = textColor
+        myBgLabel.textColor = textColor
+        myPicker.backgroundColor = pickerColor
+        self.view.backgroundColor = backgroundColor
         
         // Populating the RGB values
         for counter in 0...2{
@@ -148,6 +160,16 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 rgbValues[counter].append(i)
             }
         }
+        
+        // The user is changing the color of the label
+        for i in 0...2{
+            myPicker.selectRow(backupRgbValues[i], inComponent:i, animated: true)
+            rgbBackground[i] = backupRgbValues[i] //So that the color starts changing from the previously selected color after the user switches
+        }
+
+        
+        
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -158,8 +180,11 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         var navigationObject: FontStylingsViewController = segue.destinationViewController as FontStylingsViewController
         
         navigationObject.pickerBackground2 = pickerColor
-        navigationObject.labelBackgrounfColor = textColor
+        navigationObject.labelBackgroundColor = textColor
         navigationObject.backgroundColor2 = backgroundColor
+        navigationObject.backupRgbValues2 = backupRgbValues
+        navigationObject.backupRgbValuesLabel2 = backupRgbValuesLabel
+        navigationObject.currentSelection = currentSelection2
         
         
         
