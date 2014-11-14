@@ -177,15 +177,23 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         // Dispose of any resources that can be recreated.
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        var navigationObject: FontStylingsViewController = segue.destinationViewController as FontStylingsViewController
         
+        if (segue.identifier == "doneView"){
+            var navigationToDoneView = segue.destinationViewController as DoneViewController
+            navigationToDoneView.finalBackgroundColor = backgroundColor
+            navigationToDoneView.finalLabelColor = textColor
+            navigationToDoneView.finalLabelFont = fontFamily
+            
+        }
+        else {
+        var navigationObject: FontStylingsViewController = segue.destinationViewController as FontStylingsViewController
         navigationObject.pickerBackground2 = pickerColor
         navigationObject.labelBackgroundColor = textColor
         navigationObject.backgroundColor2 = backgroundColor
         navigationObject.backupRgbValues2 = backupRgbValues
         navigationObject.backupRgbValuesLabel2 = backupRgbValuesLabel
         navigationObject.currentSelection = currentSelection2
-        
+        }
         
         
         

@@ -125,7 +125,11 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="XzV-yS-NYd">
-                        <barButtonItem key="leftBarButtonItem" title="Done" id="9Sz-S6-bC6"/>
+                        <barButtonItem key="leftBarButtonItem" title="Done" id="9Sz-S6-bC6">
+                            <connections>
+                                <segue destination="CAb-TE-gOE" kind="show" identifier="doneView" id="zUL-37-MXm"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Font Styling" id="u6A-oD-g2A">
                             <connections>
                                 <segue destination="AV0-75-ARa" kind="show" id="Czs-O2-AU8"/>
@@ -219,7 +223,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xhA-lz-PFa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2193" y="304"/>
+            <point key="canvasLocation" x="2037" y="304"/>
         </scene>
         <!--Done View Controller-->
         <scene sceneID="h1F-Ew-x4j">
@@ -254,7 +258,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XPO-NU-TiE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2885" y="304"/>
+            <point key="canvasLocation" x="1665" y="1140"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cRS-bo-ApU">
@@ -277,5 +281,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="sse-Xv-xc0"/>
+        <segue reference="zUL-37-MXm"/>
     </inferredMetricsTieBreakers>
 </document>
