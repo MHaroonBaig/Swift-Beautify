@@ -105,7 +105,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 myLabelRgb.textColor = bgColor
                 myBgLabel.textColor = bgColor
                 textColor = bgColor
-                bgString2 = "Text RGB is " + message2
+                //bgString2 = "Text RGB is " + message2
             }
             else {
                 backupRgbValues[component] = rgbValues[component][row]
@@ -119,7 +119,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                     myBgLabel.textColor = txtColor // Label showing RGB values for the background
                 }
                 
-                bgString = "Background RGB is" + message2
+                //bgString = "Background RGB is" + message2
                 
                 if (rgbBackground[0] < 50 && rgbBackground[1] < 50 && rgbBackground[2] < 50){
                     /*
@@ -138,9 +138,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 }
             }
             
-            myBgLabel.text = bgString
-            myLabelRgb.text = bgString2
-            message2 = " " // Or else, it will add up the previous values
+            //myBgLabel.text = bgString
+            //myLabelRgb.text = bgString2
+            //message2 = " " // Or else, it will add up the previous values
     }
     
     override func viewDidLoad() {
