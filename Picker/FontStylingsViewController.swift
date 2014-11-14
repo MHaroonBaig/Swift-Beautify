@@ -27,16 +27,24 @@ class FontStylingsViewController: UIViewController, UIPickerViewDataSource, UIPi
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return data[component].count
     }
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
-        return data[component][row]
+    
+    func pickerView(pickerView: UIPickerView,
+        attributedTitleForRow row: Int,
+        forComponent component: Int) -> NSAttributedString? {
+            var para = NSMutableParagraphStyle()
+            para.alignment = NSTextAlignment.Left
+            var attributedString = NSAttributedString(string: data[component][row], attributes: [NSParagraphStyleAttributeName: para])
+            return attributedString
     }
+    
+    
     func pickerView(pickerView: UIPickerView,
         widthForComponent component: Int) -> CGFloat {
             if component == 0{
-            return 200.0
+                return 255.0
             }
             else{
-            return 40.0
+                return 35.0
             }
     }
     
@@ -47,15 +55,15 @@ class FontStylingsViewController: UIViewController, UIPickerViewDataSource, UIPi
             var someShit = willProcessData[1].toInt()
             
             myHeadingLabel.font = UIFont(name: willProcessData[0], size: CGFloat(someShit!) )
-    
-    
+            
+            
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         var fontFamilies = UIFont.familyNames()
         var fontNames: [String] = []
-       
+        
         for i in fontFamilies{
             var fontNamesForFamilies = UIFont.fontNamesForFamilyName(i as String)
             for j in fontNamesForFamilies{
@@ -63,8 +71,8 @@ class FontStylingsViewController: UIViewController, UIPickerViewDataSource, UIPi
             }
         }
         data[0] = fontNames
-       var fontSizes: [String] = []
-        for i in 1...fontNames.count{
+        var fontSizes: [String] = []
+        for i in 40...fontNames.count{
             fontSizes.append(String(i))
         }
         data[1] = fontSizes
@@ -72,7 +80,7 @@ class FontStylingsViewController: UIViewController, UIPickerViewDataSource, UIPi
         myHeadingLabel.textColor = labelBackgrounfColor
         self.view.backgroundColor = backgroundColor2
         
-       
+        
         
         // Do any additional setup after loading the view.
     }
