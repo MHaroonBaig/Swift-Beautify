@@ -22,8 +22,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     var backupRgbValuesLabel: [Int] = [255,255,255] // For Label RGB values when the switch state is changed
     
     var pickerColor: UIColor = UIColor.whiteColor()
-    var backgroundColor: UIColor = UIColor.whiteColor()
-    var textColor: UIColor = UIColor.blackColor()
+    var backgroundColor: UIColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+    var textColor: UIColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)
     
     var bgString: String = "" // This is to set the Background RGB label text
     var message2: String = " " //Just a handful string to house all the integer rgb values by converting them into a String
