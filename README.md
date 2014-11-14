@@ -6,8 +6,8 @@ values through a wheel. User can change the color of the font too, by triggering
 In short, a user can make the interface of his own choice :yum:
 
 ##Screenshots :movie_camera:
-<img src="Screenshots/shot1.png" alt="Launch Screen"> <img src="Screenshots/shot3.png" alt="Launch Screen"> <img src="Screenshots/shot2.png" alt="Launch Screen"> 
-<img src="Screenshots/shot4.png" alt="Launch Screen">
+<img src="Screenshots/shot1.png" alt="Launch Screen"> <img src="Screenshots/shot2.png" alt="Launch Screen"> <img src="Screenshots/shot3.png" alt="Launch Screen"> 
+<img src="Screenshots/shot4.png" alt="Launch Screen"> <img src="Screenshots/shot5.png" alt="Launch Screen"> <img src="Screenshots/shot6.png" alt="Launch Screen">
 
 ##Features:
 - [x] [Flat] (https://gist.githubusercontent.com/wildlyinaccurate/5137255/raw/ae831aaae8676ba5d7f9cc0fe74cb248562d598c/flat-ui-colours.txt) background coloring variations
