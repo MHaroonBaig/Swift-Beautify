@@ -13,8 +13,8 @@ In short, a user can make the interface of his own choice :yum:
 - [x] [Flat] (https://gist.githubusercontent.com/wildlyinaccurate/5137255/raw/ae831aaae8676ba5d7f9cc0fe74cb248562d598c/flat-ui-colours.txt) background coloring variations
 - [x] Font color variations
 - [x] RGB representations of each variation
-- [ ] Dynamic variations in the Font Family
-- [ ] Variations in the Font Style
+- [x] Dynamic variations in the Font Family
+- [x] Variations in the Font Style
 - [ ] Default templates
 - [ ] Final animated result when Done
 

@@ -51,12 +51,10 @@ class FontStylingsViewController: UIViewController, UIPickerViewDataSource, UIPi
     func pickerView(pickerView: UIPickerView,
         didSelectRow row: Int,
         inComponent component: Int) {
+            
             willProcessData[component] = data[component][row]
             var someShit = willProcessData[1].toInt()
-            
             myHeadingLabel.font = UIFont(name: willProcessData[0], size: CGFloat(someShit!) )
-            
-            
     }
     
     override func viewDidLoad() {
@@ -80,9 +78,6 @@ class FontStylingsViewController: UIViewController, UIPickerViewDataSource, UIPi
         myHeadingLabel.textColor = labelBackgrounfColor
         self.view.backgroundColor = backgroundColor2
         
-        
-        
-        // Do any additional setup after loading the view.
     }
     
     override func didReceiveMemoryWarning() {
