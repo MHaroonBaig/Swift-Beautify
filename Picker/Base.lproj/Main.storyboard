@@ -238,18 +238,29 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem Ipsum" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2h-TG-mDj">
-                                <rect key="frame" x="16" y="158" width="568" height="70"/>
+                                <rect key="frame" x="16" y="158" width="568" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="54b-T7-VWS"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="finalImage" translatesAutoresizingMaskIntoConstraints="NO" id="SyB-PL-Jun">
+                                <rect key="frame" x="167" y="251" width="266" height="175"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="266" id="zET-Pe-5fG"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="c2h-TG-mDj" firstAttribute="leading" secondItem="bNF-AQ-XR3" secondAttribute="leadingMargin" id="8iQ-Hx-RkM"/>
-                            <constraint firstItem="c2h-TG-mDj" firstAttribute="top" secondItem="xGi-Rn-ZF3" secondAttribute="bottom" constant="138" id="XVL-lW-ftV"/>
-                            <constraint firstItem="c2h-TG-mDj" firstAttribute="trailing" secondItem="bNF-AQ-XR3" secondAttribute="trailingMargin" id="ZPE-2Y-ibs"/>
-                            <constraint firstItem="K51-JR-1Ir" firstAttribute="top" secondItem="c2h-TG-mDj" secondAttribute="bottom" constant="328" id="syb-7n-ihO"/>
+                            <constraint firstItem="SyB-PL-Jun" firstAttribute="top" secondItem="c2h-TG-mDj" secondAttribute="bottom" constant="13" id="B1B-ke-FJ4"/>
+                            <constraint firstItem="K51-JR-1Ir" firstAttribute="top" secondItem="SyB-PL-Jun" secondAttribute="bottom" constant="130" id="Uoz-fi-IF6"/>
+                            <constraint firstItem="c2h-TG-mDj" firstAttribute="leading" secondItem="bNF-AQ-XR3" secondAttribute="leadingMargin" id="of2-Jf-pOJ"/>
+                            <constraint firstItem="c2h-TG-mDj" firstAttribute="trailing" secondItem="bNF-AQ-XR3" secondAttribute="trailingMargin" id="sKm-LJ-qrc"/>
+                            <constraint firstItem="c2h-TG-mDj" firstAttribute="top" secondItem="xGi-Rn-ZF3" secondAttribute="bottom" constant="138" id="tbh-Cx-JDs"/>
+                            <constraint firstItem="SyB-PL-Jun" firstAttribute="centerX" secondItem="c2h-TG-mDj" secondAttribute="centerX" id="xtk-BQ-NOr"/>
                         </constraints>
                     </view>
                     <connections>
@@ -279,6 +290,9 @@
             <point key="canvasLocation" x="535" y="304"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="finalImage" width="2400" height="2400"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="sse-Xv-xc0"/>
         <segue reference="zUL-37-MXm"/>

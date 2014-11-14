@@ -81,23 +81,23 @@ class FontStylingsViewController: UIViewController, UIPickerViewDataSource, UIPi
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "mainView"){
-        var navigatingBack: ViewController = segue.destinationViewController as ViewController
-        navigatingBack.fontFamily = UIFont(name: data[currentSelection], size: 45.0)
-        navigatingBack.textColor = labelBackgroundColor
-        navigatingBack.pickerColor = pickerBackground2
-        navigatingBack.backgroundColor = backgroundColor2
-        navigatingBack.backupRgbValues = backupRgbValues2
-        navigatingBack.backupRgbValuesLabel = backupRgbValuesLabel2
-        navigatingBack.switchTrigger = false
+            var navigatingBack: ViewController = segue.destinationViewController as ViewController
+            navigatingBack.fontFamily = UIFont(name: data[currentSelection], size: 45.0)
+            navigatingBack.textColor = labelBackgroundColor
+            navigatingBack.pickerColor = pickerBackground2
+            navigatingBack.backgroundColor = backgroundColor2
+            navigatingBack.backupRgbValues = backupRgbValues2
+            navigatingBack.backupRgbValuesLabel = backupRgbValuesLabel2
+            navigatingBack.switchTrigger = false
             navigatingBack.currentSelection2 = currentSelection
-        
+            
         }
         else {
-        var navigationToDoneView = segue.destinationViewController as DoneViewController
-        navigationToDoneView.finalBackgroundColor = backgroundColor2
+            var navigationToDoneView = segue.destinationViewController as DoneViewController
+            navigationToDoneView.finalBackgroundColor = backgroundColor2
             navigationToDoneView.finalLabelColor = labelBackgroundColor
             navigationToDoneView.finalLabelFont = UIFont(name: data[currentSelection], size: 45.0)
-        
+            
         }
         
     }

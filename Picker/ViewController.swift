@@ -166,10 +166,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             myPicker.selectRow(backupRgbValues[i], inComponent:i, animated: true)
             rgbBackground[i] = backupRgbValues[i] //So that the color starts changing from the previously selected color after the user switches
         }
-
-        
-        
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -183,20 +179,16 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             navigationToDoneView.finalBackgroundColor = backgroundColor
             navigationToDoneView.finalLabelColor = textColor
             navigationToDoneView.finalLabelFont = fontFamily
-            
         }
         else {
-        var navigationObject: FontStylingsViewController = segue.destinationViewController as FontStylingsViewController
-        navigationObject.pickerBackground2 = pickerColor
-        navigationObject.labelBackgroundColor = textColor
-        navigationObject.backgroundColor2 = backgroundColor
-        navigationObject.backupRgbValues2 = backupRgbValues
-        navigationObject.backupRgbValuesLabel2 = backupRgbValuesLabel
-        navigationObject.currentSelection = currentSelection2
+            var navigationObject: FontStylingsViewController = segue.destinationViewController as FontStylingsViewController
+            navigationObject.pickerBackground2 = pickerColor
+            navigationObject.labelBackgroundColor = textColor
+            navigationObject.backgroundColor2 = backgroundColor
+            navigationObject.backupRgbValues2 = backupRgbValues
+            navigationObject.backupRgbValuesLabel2 = backupRgbValuesLabel
+            navigationObject.currentSelection = currentSelection2
         }
-        
-        
-        
     }
     
     
