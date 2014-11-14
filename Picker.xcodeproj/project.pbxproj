@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7500F66D1A16299D009DA3F4 /* DoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7500F66C1A16299D009DA3F4 /* DoneViewController.swift */; };
 		75163B921A1533300052E7E6 /* FontStylingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75163B911A1533300052E7E6 /* FontStylingsViewController.swift */; };
 		759675601A09022800406914 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7596755F1A09022800406914 /* AppDelegate.swift */; };
 		759675621A09022800406914 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759675611A09022800406914 /* ViewController.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7500F66C1A16299D009DA3F4 /* DoneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoneViewController.swift; sourceTree = "<group>"; };
 		75163B911A1533300052E7E6 /* FontStylingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontStylingsViewController.swift; sourceTree = "<group>"; };
 		7596755A1A09022800406914 /* Picker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Picker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7596755E1A09022800406914 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				759675611A09022800406914 /* ViewController.swift */,
 				759675631A09022800406914 /* Main.storyboard */,
 				75163B911A1533300052E7E6 /* FontStylingsViewController.swift */,
+				7500F66C1A16299D009DA3F4 /* DoneViewController.swift */,
 				759675661A09022800406914 /* Images.xcassets */,
 				759675681A09022800406914 /* LaunchScreen.xib */,
 				7596755D1A09022800406914 /* Supporting Files */,
@@ -215,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7500F66D1A16299D009DA3F4 /* DoneViewController.swift in Sources */,
 				759675621A09022800406914 /* ViewController.swift in Sources */,
 				759675601A09022800406914 /* AppDelegate.swift in Sources */,
 				75163B921A1533300052E7E6 /* FontStylingsViewController.swift in Sources */,

@@ -23,11 +23,7 @@ class FontStylingsViewController: UIViewController, UIPickerViewDataSource, UIPi
     @IBOutlet weak var mySecondLabel: UILabel!
     @IBOutlet weak var myThirdLabel: UILabel!
     
-    @IBAction func doneView(sender: AnyObject) {
-        
-        var alert = UIAlertView(title: "Hello", message: "You pressed me", delegate: nil, cancelButtonTitle: "okay")
-        alert.show()
-    }
+    
     var backupRgbValues2: [Int] = [255,255,255] //For Background RGB values when the switch state is changes
     var backupRgbValuesLabel2: [Int] = [255,255,255] // For Label RGB values when the switch state is changed
     
@@ -84,6 +80,7 @@ class FontStylingsViewController: UIViewController, UIPickerViewDataSource, UIPi
         // Dispose of any resources that can be recreated.
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "mainView"){
         var navigatingBack: ViewController = segue.destinationViewController as ViewController
         navigatingBack.fontFamily = UIFont(name: data[currentSelection], size: 45.0)
         navigatingBack.textColor = labelBackgroundColor
@@ -92,7 +89,17 @@ class FontStylingsViewController: UIViewController, UIPickerViewDataSource, UIPi
         navigatingBack.backupRgbValues = backupRgbValues2
         navigatingBack.backupRgbValuesLabel = backupRgbValuesLabel2
         navigatingBack.switchTrigger = false
-        navigatingBack.currentSelection2 = currentSelection
+            navigatingBack.currentSelection2 = currentSelection
+        
+        }
+        else {
+        var navigationToDoneView = segue.destinationViewController as DoneViewController
+        navigationToDoneView.finalBackgroundColor = backgroundColor2
+            navigationToDoneView.finalLabelColor = labelBackgroundColor
+            navigationToDoneView.finalLabelFont = UIFont(name: data[currentSelection], size: 45.0)
+        
+        }
+        
     }
     
     

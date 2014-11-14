@@ -125,6 +125,7 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="XzV-yS-NYd">
+                        <barButtonItem key="leftBarButtonItem" title="Done" id="9Sz-S6-bC6"/>
                         <barButtonItem key="rightBarButtonItem" title="Font Styling" id="u6A-oD-g2A">
                             <connections>
                                 <segue destination="AV0-75-ARa" kind="show" id="Czs-O2-AU8"/>
@@ -199,12 +200,12 @@
                     <navigationItem key="navigationItem" title="Font Families" id="jZJ-Lu-ex6">
                         <barButtonItem key="leftBarButtonItem" title=" Back" id="Wqg-LA-48i">
                             <connections>
-                                <segue destination="vXZ-lx-hvc" kind="show" id="sse-Xv-xc0"/>
+                                <segue destination="vXZ-lx-hvc" kind="show" identifier="mainView" id="sse-Xv-xc0"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="A6B-LO-cFR">
                             <connections>
-                                <action selector="doneView:" destination="AV0-75-ARa" id="1vX-Kx-sTQ"/>
+                                <segue destination="CAb-TE-gOE" kind="show" identifier="doneView" id="0R6-AH-cxc"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -218,7 +219,42 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xhA-lz-PFa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2097" y="298"/>
+            <point key="canvasLocation" x="2193" y="304"/>
+        </scene>
+        <!--Done View Controller-->
+        <scene sceneID="h1F-Ew-x4j">
+            <objects>
+                <viewController id="CAb-TE-gOE" customClass="DoneViewController" customModule="Picker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xGi-Rn-ZF3"/>
+                        <viewControllerLayoutGuide type="bottom" id="K51-JR-1Ir"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bNF-AQ-XR3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem Ipsum" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2h-TG-mDj">
+                                <rect key="frame" x="16" y="158" width="568" height="70"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="c2h-TG-mDj" firstAttribute="leading" secondItem="bNF-AQ-XR3" secondAttribute="leadingMargin" id="8iQ-Hx-RkM"/>
+                            <constraint firstItem="c2h-TG-mDj" firstAttribute="top" secondItem="xGi-Rn-ZF3" secondAttribute="bottom" constant="138" id="XVL-lW-ftV"/>
+                            <constraint firstItem="c2h-TG-mDj" firstAttribute="trailing" secondItem="bNF-AQ-XR3" secondAttribute="trailingMargin" id="ZPE-2Y-ibs"/>
+                            <constraint firstItem="K51-JR-1Ir" firstAttribute="top" secondItem="c2h-TG-mDj" secondAttribute="bottom" constant="328" id="syb-7n-ihO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mylabel" destination="c2h-TG-mDj" id="clM-N2-eho"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XPO-NU-TiE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2885" y="304"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cRS-bo-ApU">
@@ -240,6 +276,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="xj9-a4-RqY"/>
+        <segue reference="sse-Xv-xc0"/>
     </inferredMetricsTieBreakers>
 </document>
