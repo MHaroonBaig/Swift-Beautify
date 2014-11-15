@@ -19,12 +19,12 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     
     var rgbBackground: [Int] = [255,255,255] // Populated by each component of a picker
-    var backupRgbValues: [Int] = [0,0,0] //For Background RGB values when the switch state is changes
+    var backupRgbValues: [Int] = [46,204,113] //For Background RGB values when the switch state is changes
     var backupRgbValuesLabel: [Int] = [255,255,255] // For Label RGB values when the switch state is changed
     
-    var pickerColor: UIColor = UIColor.whiteColor()
-    var backgroundColor: UIColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-    var textColor: UIColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)
+    var pickerColor: UIColor = UIColor(red: 46/255.0, green: 204/255.0, blue: 113/255.0, alpha: 0.5)
+    var backgroundColor: UIColor = UIColor(red: 46/255.0, green: 204/255.0, blue: 113/255.0, alpha: 1.0)
+    var textColor: UIColor = UIColor(red: 236.0/255.0, green: 240/255.0, blue: 241/255.0, alpha: 1.0)
     
     var bgString: String = "" // This is to set the Background RGB label text
     var message2: String = " " //Just a handful string to house all the integer rgb values by converting them into a String
@@ -96,8 +96,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             var green_col: CGFloat = CGFloat(rgbBackground[1])/255.0
             var blue_col: CGFloat = CGFloat(rgbBackground[2])/255.0
             var bgColor = UIColor(red: red_col, green: green_col, blue: blue_col, alpha: 1.0)
-            var txtColor = UIColor(red: 1.0 - red_col, green: 1 - green_col, blue: 1 - blue_col, alpha: 1.0) // Varying color according to the background to make the Text visible
-            
+          
             // If the switch is ON, we change the label color.
             if mySwitch.on{
                 backupRgbValuesLabel[component] = rgbValues[component][row]
@@ -111,15 +110,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 backupRgbValues[component] = rgbValues[component][row]
                 self.view.backgroundColor = bgColor
                 backgroundColor = bgColor
-                
-                // If the user has selected a text color and comes back to the background selection, his selection for the text remains the same.
-                if (switchTrigger){
-                    myLabel.textColor = txtColor // Main Label
-                    myLabelRgb.textColor = txtColor // Label showing RGB values for the main label
-                    myBgLabel.textColor = txtColor // Label showing RGB values for the background
-                }
-                
-                //bgString = "Background RGB is" + message2
                 
                 if (rgbBackground[0] < 50 && rgbBackground[1] < 50 && rgbBackground[2] < 50){
                     /*
@@ -137,10 +127,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                     myPicker.backgroundColor =    pickerColor
                 }
             }
-            
-            //myBgLabel.text = bgString
-            //myLabelRgb.text = bgString2
-            //message2 = " " // Or else, it will add up the previous values
+
     }
     func sideBarDidSelectButtonAtIndex(index: Int) {
         
@@ -280,10 +267,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             }
         }
         
-        // The user is changing the color of the label
-        for i in 0...2{
+            for i in 0...2{
             myPicker.selectRow(backupRgbValues[i], inComponent:i, animated: true)
-            rgbBackground[i] = backupRgbValues[i] //So that the color starts changing from the previously selected color after the user switches
+            rgbBackground[i] = backupRgbValues[i]
         }
         sideBar = SideBar(sourceView: self.view, menuItems: ["Turquoise", "Greensea", "Emerland", "Nephritis", "Peterriver", "Belizehole", "Amethyst", "Wisteria", "Wetasphalt", "Midnightblue", "Sunflower", "Orange", "Carrot", "Pumpkin", "Alizarin", "Pomegranate", "Clouds", "Silver", "Concrete", "Asbestos", "Wistful", "Snuff"])
         sideBar.delegate = self
