@@ -9,7 +9,7 @@
         <!--Make your choice-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController title="Make your choice" id="vXZ-lx-hvc" customClass="ViewController" customModule="Picker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mainView" title="Make your choice" id="vXZ-lx-hvc" customClass="ViewController" customModule="Picker" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -151,7 +151,7 @@
         <!--Font Families-->
         <scene sceneID="41W-RS-ZXa">
             <objects>
-                <viewController id="AV0-75-ARa" customClass="FontStylingsViewController" customModule="Picker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="secondView" id="AV0-75-ARa" customClass="FontStylingsViewController" customModule="Picker" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Wia-TW-TbR"/>
                         <viewControllerLayoutGuide type="bottom" id="NBn-yk-64W"/>
@@ -237,13 +237,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="finalImage" translatesAutoresizingMaskIntoConstraints="NO" id="SyB-PL-Jun">
+                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="finalImage" translatesAutoresizingMaskIntoConstraints="NO" id="SyB-PL-Jun">
                                 <rect key="frame" x="167" y="251" width="266" height="175"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="266" id="zET-Pe-5fG"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="I love this" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2h-TG-mDj">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I love this" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2h-TG-mDj">
                                 <rect key="frame" x="16" y="158" width="568" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="54b-T7-VWS"/>
@@ -302,6 +302,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="xj9-a4-RqY"/>
-        <segue reference="zUL-37-MXm"/>
+        <segue reference="0R6-AH-cxc"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -8,8 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, SideBarDelegate{
     
+    var sideBar:SideBar = SideBar()
     var rgbValues: [[Int]] = [[0], [0], [0]] // This contains the content of each row of a component. Each row is having numbers ranging from 0 to 255
     var switchTrigger: Bool = true
     
@@ -36,6 +37,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     @IBAction func switchStateChanged(sender: UISwitch) {
         if (sender.on){
+            
             // The user is changing the color of the label
             for i in 0...2{
                 myPicker.selectRow(backupRgbValuesLabel[i], inComponent:i, animated: true)
@@ -142,6 +144,130 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             //myLabelRgb.text = bgString2
             //message2 = " " // Or else, it will add up the previous values
     }
+    func sideBarDidSelectButtonAtIndex(index: Int) {
+        
+        switch (index){
+        case 0:
+            self.view.backgroundColor = colorWithHexString("1abc9c")
+            break
+        case 1:
+            self.view.backgroundColor = colorWithHexString("16a085")
+            break
+        case 2:
+            self.view.backgroundColor = colorWithHexString("2ecc71")
+            break
+        case 3:
+            self.view.backgroundColor = colorWithHexString("27ae60")
+            break
+        case 4:
+            self.view.backgroundColor = colorWithHexString("3498db")
+            break
+        case 5:
+            self.view.backgroundColor = colorWithHexString("2980b9")
+            break
+        case 6:
+            self.view.backgroundColor = colorWithHexString("9b59b6")
+            break
+        case 7:
+            self.view.backgroundColor = colorWithHexString("8e44ad")
+            break
+        case 8:
+            self.view.backgroundColor = colorWithHexString("34495e")
+            break
+        case 9:
+            self.view.backgroundColor = colorWithHexString("2c3e50")
+            break
+        case 10:
+            self.view.backgroundColor = colorWithHexString("f1c40f")
+            break
+        case 11:
+            self.view.backgroundColor = colorWithHexString("f39c12")
+            break
+        case 12:
+            self.view.backgroundColor = colorWithHexString("e67e22")
+            break
+        case 13:
+            self.view.backgroundColor = colorWithHexString("d35400")
+            break
+        case 14:
+            self.view.backgroundColor = colorWithHexString("e74c3c")
+            break
+        case 15:
+            self.view.backgroundColor = colorWithHexString("c0392b")
+            break
+        case 16:
+            self.view.backgroundColor = colorWithHexString("ecf0f1")
+            break
+        case 17:
+            self.view.backgroundColor = colorWithHexString("bdc3c7")
+            break
+        case 18:
+            self.view.backgroundColor = colorWithHexString("95a5a6")
+            break
+        case 19:
+            self.view.backgroundColor = colorWithHexString("7f8c8d")
+            break
+        case 20:
+            self.view.backgroundColor = colorWithHexString("AEA8D3")
+            break
+        case 21:
+            self.view.backgroundColor = colorWithHexString("DCC6E0")
+            break
+        default:
+            
+            break
+        }
+    }
+    
+    func colorWithHexString (hex:String) -> UIColor {
+        var cString:String = hex.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet()).uppercaseString
+        
+        if (cString.hasPrefix("#")) {
+            cString = (cString as NSString).substringFromIndex(1)
+        }
+        
+        if (countElements(cString) != 6) {
+            return UIColor.grayColor()
+        }
+        
+        var rString = (cString as NSString).substringToIndex(2)
+        var gString = ((cString as NSString).substringFromIndex(2) as NSString).substringToIndex(2)
+        var bString = ((cString as NSString).substringFromIndex(4) as NSString).substringToIndex(2)
+        
+        var r:CUnsignedInt = 0, g:CUnsignedInt = 0, b:CUnsignedInt = 0;
+        NSScanner(string: rString).scanHexInt(&r)
+        NSScanner(string: gString).scanHexInt(&g)
+        NSScanner(string: bString).scanHexInt(&b)
+        //SweetAlert().showAlert("\(r)")
+        
+        
+        
+        if (!mySwitch.on){
+            rgbBackground[0] = Int(r)
+            rgbBackground[1] = Int(g)
+            rgbBackground[2] = Int(b)
+            backupRgbValues = rgbBackground
+            for i in 0...2{
+                myPicker.selectRow(rgbBackground[i], inComponent: i, animated: true)
+            }
+        }
+        
+        
+        var finalConvertedColor = UIColor(red: CGFloat(r) / 255.0, green: CGFloat(g) / 255.0, blue: CGFloat(b) / 255.0, alpha: CGFloat(1))
+        
+        var red = CGFloat(r) / 255.0
+        var green = CGFloat(g) / 255.0
+        var blue  = CGFloat(b) / 255.0
+        
+        
+        pickerColor = UIColor(red: red + red/3.0, green: green + green/3.0, blue: blue + blue/3.0, alpha: 0.5)
+        myPicker.backgroundColor = pickerColor
+        backgroundColor = finalConvertedColor
+        
+        
+        return finalConvertedColor
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -166,6 +292,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             myPicker.selectRow(backupRgbValues[i], inComponent:i, animated: true)
             rgbBackground[i] = backupRgbValues[i] //So that the color starts changing from the previously selected color after the user switches
         }
+        sideBar = SideBar(sourceView: self.view, menuItems: ["Turquoise", "Greensea", "Emerland", "Nephritis", "Peterriver", "Belizehole", "Amethyst", "Wisteria", "Wetasphalt", "Midnightblue", "Sunflower", "Orange", "Carrot", "Pumpkin", "Alizarin", "Pomegranate", "Clouds", "Silver", "Concrete", "Asbestos", "Wistful", "Snuff"])
+        sideBar.delegate = self
+        
     }
     
     override func didReceiveMemoryWarning() {

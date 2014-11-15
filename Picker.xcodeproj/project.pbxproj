@@ -16,6 +16,8 @@
 		759675671A09022800406914 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 759675661A09022800406914 /* Images.xcassets */; };
 		7596756A1A09022800406914 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 759675681A09022800406914 /* LaunchScreen.xib */; };
 		759675761A09022800406914 /* PickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759675751A09022800406914 /* PickerTests.swift */; };
+		75BE67601A176689004ACE6E /* SideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BE675E1A176689004ACE6E /* SideBar.swift */; };
+		75BE67611A176689004ACE6E /* SideBarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BE675F1A176689004ACE6E /* SideBarTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,8 @@
 		7596756F1A09022800406914 /* PickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PickerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		759675741A09022800406914 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		759675751A09022800406914 /* PickerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerTests.swift; sourceTree = "<group>"; };
+		75BE675E1A176689004ACE6E /* SideBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBar.swift; sourceTree = "<group>"; };
+		75BE675F1A176689004ACE6E /* SideBarTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBarTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,8 @@
 				7596755F1A09022800406914 /* AppDelegate.swift */,
 				759675611A09022800406914 /* ViewController.swift */,
 				759675631A09022800406914 /* Main.storyboard */,
+				75BE675E1A176689004ACE6E /* SideBar.swift */,
+				75BE675F1A176689004ACE6E /* SideBarTableViewController.swift */,
 				75163B911A1533300052E7E6 /* FontStylingsViewController.swift */,
 				7500F66C1A16299D009DA3F4 /* DoneViewController.swift */,
 				7500F66E1A168067009DA3F4 /* SweetAlert.swift */,
@@ -221,10 +227,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75BE67611A176689004ACE6E /* SideBarTableViewController.swift in Sources */,
 				7500F66D1A16299D009DA3F4 /* DoneViewController.swift in Sources */,
 				7500F66F1A168067009DA3F4 /* SweetAlert.swift in Sources */,
 				759675621A09022800406914 /* ViewController.swift in Sources */,
 				759675601A09022800406914 /* AppDelegate.swift in Sources */,
+				75BE67601A176689004ACE6E /* SideBar.swift in Sources */,
 				75163B921A1533300052E7E6 /* FontStylingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
