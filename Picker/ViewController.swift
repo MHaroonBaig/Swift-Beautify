@@ -33,8 +33,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet weak var myPicker: UIPickerView!
     @IBOutlet weak var myLabelRgb: UILabel! // Text RGB value
     
-    
-    
     @IBAction func switchStateChanged(sender: UISwitch) {
         if (sender.on){
             
@@ -240,8 +238,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         NSScanner(string: bString).scanHexInt(&b)
         //SweetAlert().showAlert("\(r)")
         
-        
-        
         if (!mySwitch.on){
             rgbBackground[0] = Int(r)
             rgbBackground[1] = Int(g)
@@ -252,18 +248,15 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             }
         }
         
-        
         var finalConvertedColor = UIColor(red: CGFloat(r) / 255.0, green: CGFloat(g) / 255.0, blue: CGFloat(b) / 255.0, alpha: CGFloat(1))
         
         var red = CGFloat(r) / 255.0
         var green = CGFloat(g) / 255.0
         var blue  = CGFloat(b) / 255.0
         
-        
         pickerColor = UIColor(red: red + red/3.0, green: green + green/3.0, blue: blue + blue/3.0, alpha: 0.5)
         myPicker.backgroundColor = pickerColor
         backgroundColor = finalConvertedColor
-        
         
         return finalConvertedColor
     }
@@ -319,7 +312,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             navigationObject.currentSelection = currentSelection2
         }
     }
-    
     
 }
 
