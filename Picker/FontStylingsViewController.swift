@@ -10,7 +10,7 @@ import UIKit
 
 class FontStylingsViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
-    var data: [String] = []
+    var data: [String]!
     var currentSelection:Int = 6
     
     
@@ -65,7 +65,7 @@ class FontStylingsViewController: UIViewController, UIPickerViewDataSource, UIPi
             }
         }
         
-        data = fontNames
+        data = sorted (fontNames, {(s1: String, s2:String) -> Bool in return s1 < s2 })
         
         myPickerView2.backgroundColor = pickerBackground2
         myHeadingLabel.textColor = labelBackgroundColor

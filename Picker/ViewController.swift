@@ -96,7 +96,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             var green_col: CGFloat = CGFloat(rgbBackground[1])/255.0
             var blue_col: CGFloat = CGFloat(rgbBackground[2])/255.0
             var bgColor = UIColor(red: red_col, green: green_col, blue: blue_col, alpha: 1.0)
-          
+            
             // If the switch is ON, we change the label color.
             if mySwitch.on{
                 backupRgbValuesLabel[component] = rgbValues[component][row]
@@ -127,7 +127,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                     myPicker.backgroundColor =    pickerColor
                 }
             }
-
+            
     }
     func sideBarDidSelectButtonAtIndex(index: Int) {
         
@@ -267,7 +267,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             }
         }
         
-            for i in 0...2{
+        for i in 0...2{
             myPicker.selectRow(backupRgbValues[i], inComponent:i, animated: true)
             rgbBackground[i] = backupRgbValues[i]
         }
