@@ -24,24 +24,42 @@ extension UIView {
 class DoneViewController: UIViewController {
     
     
-    
+    var alertButtonColor: UIColor!
     var finalLabelColor:UIColor!
     var finalBackgroundColor: UIColor!
     var finalLabelFont: UIFont!
-    
+    var finalValueMessage: String!
     
     @IBOutlet weak var mylabel: UILabel!
     
+    @IBOutlet weak var aboutButton: UIButton!
+    @IBAction func aboutView(sender: AnyObject) {
+        var aboutMe: String = "Hi folks. I'm haroon, a slash coder and a techie guy digging deep into various new tech-related stuff with great enthusiasm to try new gadgets. I usually spend a lot of time coding in Python and Swift, configuring Linux and exploring Django.\n\nEmail: haroon.prog@gmail.com\nTwitter: @PyBaig\n\nHappy coding"
+        SweetAlert().showAlert("Hi There!", subTitle: aboutMe, style: AlertStyle.CustomImag(imageFile: "myPic.png"), buttonTitle: "Got it", buttonColor: alertButtonColor, action: nil)
+    }
     @IBAction func valuesRetrieval(sender: AnyObject) {
-        var alertButtonColor: UIColor
         
+        
+        SweetAlert().showAlert("Your Values", subTitle: "\(finalValueMessage)", style: AlertStyle.Success, buttonTitle: "Got it", buttonColor: alertButtonColor, action: nil)
+        
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.view.backgroundColor = finalBackgroundColor
+        mylabel.textColor = finalLabelColor
+        mylabel.font = finalLabelFont
+        mylabel.fadeOut(completion: {
+            (finished: Bool) -> Void in
+            self.mylabel.text = "Lorem Ipsum"
+            self.mylabel.fadeIn()
+        })
+        
+        aboutButton.tintColor = finalLabelColor
         var labelColor: String = finalLabelColor.description
         var components = labelColor.componentsSeparatedByString(" ")
         var labelRed = Int (((components[1] as NSString).doubleValue) * 255.0)
         var labelGreen = Int (((components[2] as NSString).doubleValue) * 255.0)
         var labelBlue = Int (((components[3] as NSString).doubleValue) * 255.0)
-        
-        
         
         var backgroundColor: String = finalBackgroundColor.description
         components = backgroundColor.componentsSeparatedByString(" ")
@@ -60,22 +78,8 @@ class DoneViewController: UIViewController {
         var labelString: String = "Text color: (\(labelRed), \(labelGreen), \(labelBlue))"
         var fontName = "Awesome Font: "+finalLabelFont.fontName
         
-        var finalValueMessage = "\(backgroundString)\n\(labelString)\n\(fontName)\n\n*Values are in RGB"
-        
-        SweetAlert().showAlert("Your Values", subTitle: "\(finalValueMessage)", style: AlertStyle.Success, buttonTitle: "Got it", buttonColor: alertButtonColor, action: nil)
-        
-    }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.view.backgroundColor = finalBackgroundColor
-        mylabel.textColor = finalLabelColor
-        mylabel.font = finalLabelFont
-        mylabel.fadeOut(completion: {
-            (finished: Bool) -> Void in
-            self.mylabel.text = "Lorem Ipsum"
-            self.mylabel.fadeIn()
-        })
-        // Do any additional setup after loading the view.
+        finalValueMessage = "\(backgroundString)\n\(labelString)\n\(fontName)\n\n*Values are in RGB"
+
     }
     
     override func didReceiveMemoryWarning() {
