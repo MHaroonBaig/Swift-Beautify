@@ -5,6 +5,8 @@ So basically, what this app does is that it lets a user play with different colo
 values through a wheel. User can change the color of the font too, by triggering the switch to lock the background. 
 In short, a user can make the interface of his own choice :yum:
 
+:movie_camera: :movie_camera: Here is a little demo of this app: http://screencast.com/t/LpcnuUY94 
+
 ##Screenshots :movie_camera:
 <img src="Screenshots/shot1.png" alt="First Screen"> <img src="Screenshots/shot2.png" alt="Second Screen"> <img src="Screenshots/shot3.png" alt="Third Screen">
 <br>
