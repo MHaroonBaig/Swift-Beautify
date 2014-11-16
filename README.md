@@ -5,9 +5,10 @@ So basically, what this app does is that it lets a user play with different colo
 values through a wheel. User can change the color of the font too, by triggering the switch to lock the background. 
 In short, a user can make the interface of his own choice :yum:
 
-:movie_camera: :movie_camera: Here is a little demo of this app: http://screencast.com/t/LpcnuUY94 
+##Demo
+<img src="Screenshots/screencast.gif" alt="Demo">
 
-##Screenshots :movie_camera:
+##Screenshots
 <img src="Screenshots/shot1.png" alt="First Screen"> <img src="Screenshots/shot2.png" alt="Second Screen"> <img src="Screenshots/shot3.png" alt="Third Screen">
 <br>
 <img src="Screenshots/shot4.png" alt="First Screen"> <img src="Screenshots/shot5.png" alt="Second Screen"> <img src="Screenshots/shot6.png" alt="Third Screen"> <br>
@@ -15,7 +16,7 @@ In short, a user can make the interface of his own choice :yum:
 <img src="Screenshots/shot10.png" alt="First Screen"> <img src="Screenshots/shot11.png" alt="Second Screen"> <img src="Screenshots/shot12.png" alt="Third Screen">
 
 
-##Features:
+##Features
 - [x] [Flat] (https://gist.githubusercontent.com/wildlyinaccurate/5137255/raw/ae831aaae8676ba5d7f9cc0fe74cb248562d598c/flat-ui-colours.txt) background coloring variations
 - [x] Font color variations
 - [x] RGB representations of each variation
