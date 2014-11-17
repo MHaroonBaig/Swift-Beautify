@@ -1,4 +1,4 @@
-#Beautify :heart:
+#[Beautify] (http://mharoonbaig.github.io/Beautify/) 
 
 An iOS app written entirely in Swift, which let users design their own interface. 
 So basically, what this app does is that it lets a user play with different color combinations by dynamically modifying RGB
