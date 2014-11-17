@@ -46,7 +46,7 @@ class DoneViewController: UIViewController {
         alert.setColor(finalBackgroundColor)
         alert.showAlert("Your Values", subTitle: "\(finalValueMessage)", style: AlertStyle.Success, buttonTitle: "Got it", buttonColor: alertButtonColor, action: nil)
     }
-   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = finalBackgroundColor
@@ -83,7 +83,7 @@ class DoneViewController: UIViewController {
         var fontName = "Awesome Font: "+finalLabelFont.fontName
         
         finalValueMessage = "\(backgroundString)\n\(labelString)\n\(fontName)\n\n*Values are in RGB"
-
+        
     }
     
     override func didReceiveMemoryWarning() {

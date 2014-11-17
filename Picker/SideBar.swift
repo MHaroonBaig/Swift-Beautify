@@ -15,13 +15,13 @@ import UIKit
 }
 
 class SideBar: NSObject, SideBarTableViewControllerDelegate {
-   
+    
     let barWidth:CGFloat = 200.0
     let sideBarTableViewTopInset:CGFloat = 64.0
     let sideBarContainerView:UIView = UIView()
     let sideBarTableViewController:SideBarTableViewController = SideBarTableViewController()
     let originView:UIView!
-   
+    
     var animator:UIDynamicAnimator!
     var delegate:SideBarDelegate?
     var isSideBarOpen:Bool = false
@@ -74,7 +74,7 @@ class SideBar: NSObject, SideBarTableViewControllerDelegate {
         sideBarTableViewController.tableView.reloadData()
         
         sideBarContainerView.addSubview(sideBarTableViewController.tableView)
-    
+        
     }
     
     
@@ -87,7 +87,7 @@ class SideBar: NSObject, SideBarTableViewControllerDelegate {
             showSideBar(true)
             delegate?.sideBarWillOpen?()
         }
-    
+        
     }
     
     
@@ -116,7 +116,7 @@ class SideBar: NSObject, SideBarTableViewControllerDelegate {
         let sideBarBehavior:UIDynamicItemBehavior = UIDynamicItemBehavior(items: [sideBarContainerView])
         sideBarBehavior.elasticity = 0.3
         animator.addBehavior(sideBarBehavior)
-    
+        
     }
     
     
