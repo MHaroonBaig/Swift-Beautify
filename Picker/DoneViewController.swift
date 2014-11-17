@@ -8,6 +8,8 @@
 
 import UIKit
 
+
+
 extension UIView {
     func fadeIn(duration: NSTimeInterval = 1.5, delay: NSTimeInterval = 0.5, completion: ((Bool) -> Void) = {(finished: Bool) -> Void in}) {
         UIView.animateWithDuration(duration, delay: delay, options: UIViewAnimationOptions.CurveEaseIn, animations: {
@@ -30,6 +32,7 @@ class DoneViewController: UIViewController {
     var finalLabelFont: UIFont!
     var finalValueMessage: String!
     
+    
     @IBOutlet weak var mylabel: UILabel!
     
     @IBOutlet weak var aboutButton: UIButton!
@@ -39,10 +42,11 @@ class DoneViewController: UIViewController {
     }
     @IBAction func valuesRetrieval(sender: AnyObject) {
         
-        
-        SweetAlert().showAlert("Your Values", subTitle: "\(finalValueMessage)", style: AlertStyle.Success, buttonTitle: "Got it", buttonColor: alertButtonColor, action: nil)
-        
+        var alert = SweetAlert()
+        alert.setColor(finalBackgroundColor)
+        alert.showAlert("Your Values", subTitle: "\(finalValueMessage)", style: AlertStyle.Success, buttonTitle: "Got it", buttonColor: alertButtonColor, action: nil)
     }
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = finalBackgroundColor

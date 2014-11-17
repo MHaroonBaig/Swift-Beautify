@@ -10,6 +10,8 @@ import Foundation
 import UIKit
 import QuartzCore
 
+var someColor: UIColor!
+
 enum AlertStyle {
     case Success,Error,Warning,None
     case CustomImag(imageFile:String)
@@ -60,6 +62,10 @@ class SweetAlert: UIViewController {
         contentView.backgroundColor = UIColorFromRGB(0xFFFFFF)
         contentView.layer.borderColor = UIColorFromRGB(0xCCCCCC).CGColor
         view.addSubview(contentView)
+    }
+    
+    func setColor (a: UIColor){
+    someColor = a
     }
 
     func setupTitleLabel() {
@@ -608,17 +614,30 @@ class SuccessAnimatedView: AnimatableView {
             0);
         outlineLayer.path = outlineCircle
         outlineLayer.fillColor = UIColor.clearColor().CGColor;
-        outlineLayer.strokeColor = UIColor(red: 150.0/255.0, green: 216.0/255.0, blue: 115.0/255.0, alpha: 1.0).CGColor;
+        
+        if someColor != nil{
+            outlineLayer.strokeColor = someColor?.CGColor
+        }
+        else {
+            outlineLayer.strokeColor = UIColor(red: 150.0/255.0, green: 216.0/255.0, blue: 115.0/255.0, alpha: 1.0).CGColor;
+        }
+        
         outlineLayer.lineCap = kCALineCapRound
         outlineLayer.lineWidth = 4;
-        outlineLayer.opacity = 0.1
+        outlineLayer.opacity = 0.2
         self.layer.addSublayer(outlineLayer)
         
         circleLayer.position = CGPointMake(0,
             0);
         circleLayer.path = path
         circleLayer.fillColor = UIColor.clearColor().CGColor;
+        
+        if someColor != nil{
+        circleLayer.strokeColor = someColor?.CGColor
+        }
+        else {
         circleLayer.strokeColor = UIColor(red: 150.0/255.0, green: 216.0/255.0, blue: 115.0/255.0, alpha: 1.0).CGColor;
+        }
         circleLayer.lineCap = kCALineCapRound
         circleLayer.lineWidth = 4;
         circleLayer.actions = [
