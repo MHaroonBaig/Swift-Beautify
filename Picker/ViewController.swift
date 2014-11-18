@@ -271,9 +271,12 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             myPicker.selectRow(backupRgbValues[i], inComponent:i, animated: true)
             rgbBackground[i] = backupRgbValues[i]
         }
+        
+    }
+    override func viewDidAppear(animated: Bool) {
         sideBar = SideBar(sourceView: self.view, menuItems: ["Turquoise", "Greensea", "Emerland", "Nephritis", "Peterriver", "Belizehole", "Amethyst", "Wisteria", "Wetasphalt", "Midnightblue", "Sunflower", "Orange", "Carrot", "Pumpkin", "Alizarin", "Pomegranate", "Clouds", "Silver", "Concrete", "Asbestos", "Wistful", "Snuff"])
         sideBar.delegate = self
-        
+
     }
     
     override func didReceiveMemoryWarning() {

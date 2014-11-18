@@ -90,6 +90,10 @@ class SideBar: NSObject, SideBarTableViewControllerDelegate {
         
     }
     
+    func toggleSidebar (value: Bool){
+    showSideBar(value)
+    }
+    
     
     func showSideBar(shouldOpen:Bool){
         animator.removeAllBehaviors()
