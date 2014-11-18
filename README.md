@@ -24,7 +24,7 @@ In short, a user can make the interface of his own choice :yum:
 - [x] Dynamic variations in the Font Family
 - [x] Variations in the Font Style
 - [x] Default templates through the side bar
-- [x] Final animated result when Done
+- [x] Final animated result at the end
 
 ---
 Compiled on Xcode 6.1, Optimised both for iPhones and iPads running iOS 7 or later :yum:
