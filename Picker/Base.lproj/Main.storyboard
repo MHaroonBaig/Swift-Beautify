@@ -69,7 +69,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999964" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Doo-0h-aYe">
                                 <rect key="frame" x="16" y="223" width="568" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="vBZ-2y-OLh"/>
+                                    <constraint firstAttribute="height" constant="44" id="5Km-8A-vzn"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="20"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -83,8 +83,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8TR-BM-FrI">
                                 <rect key="frame" x="16" y="157" width="568" height="58"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="568" id="vhA-i5-slH"/>
-                                    <constraint firstAttribute="height" constant="58" id="zja-NA-q0s"/>
+                                    <constraint firstAttribute="height" constant="58" id="SBC-DY-ClL"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="45"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -93,25 +92,24 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="8TR-BM-FrI" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="19K-ev-KQb"/>
                             <constraint firstItem="LMi-7S-pHJ" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="2bQ-9G-uBa"/>
-                            <constraint firstItem="Doo-0h-aYe" firstAttribute="trailing" secondItem="8TR-BM-FrI" secondAttribute="trailing" id="2gP-mi-FLO"/>
-                            <constraint firstItem="8TR-BM-FrI" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="137" id="3Ch-7n-Shb"/>
-                            <constraint firstItem="SLC-MP-LGi" firstAttribute="top" secondItem="3aI-Ot-jrf" secondAttribute="bottom" constant="8" symbolic="YES" id="4Ds-BC-QB6"/>
+                            <constraint firstItem="SLC-MP-LGi" firstAttribute="centerX" secondItem="3aI-Ot-jrf" secondAttribute="centerX" id="42z-fR-uyg"/>
                             <constraint firstItem="LXK-l3-WdN" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-32" id="84I-v3-yok"/>
-                            <constraint firstItem="Nkw-UO-z1K" firstAttribute="top" secondItem="Doo-0h-aYe" secondAttribute="bottom" constant="-267" id="BNH-Oz-VVH"/>
-                            <constraint firstItem="Nkw-UO-z1K" firstAttribute="centerX" secondItem="Doo-0h-aYe" secondAttribute="centerX" constant="-300" id="Ihn-sx-Ouu"/>
-                            <constraint firstAttribute="trailing" secondItem="SLC-MP-LGi" secondAttribute="trailing" id="OPQ-iT-7S7"/>
+                            <constraint firstItem="SLC-MP-LGi" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Bjp-r2-Jzt"/>
+                            <constraint firstItem="3aI-Ot-jrf" firstAttribute="centerX" secondItem="Doo-0h-aYe" secondAttribute="centerX" id="IzZ-YJ-CLe"/>
+                            <constraint firstAttribute="trailing" secondItem="SLC-MP-LGi" secondAttribute="trailing" id="Mmc-Na-rkz"/>
                             <constraint firstItem="LXK-l3-WdN" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="OiH-5v-Xpd"/>
-                            <constraint firstItem="3aI-Ot-jrf" firstAttribute="centerX" secondItem="SLC-MP-LGi" secondAttribute="centerX" id="Qag-l1-yPz"/>
                             <constraint firstItem="LXK-l3-WdN" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="36" id="S5r-St-MDA"/>
-                            <constraint firstItem="SLC-MP-LGi" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" constant="44" id="Soa-la-Vmp"/>
-                            <constraint firstItem="8TR-BM-FrI" firstAttribute="centerX" secondItem="3aI-Ot-jrf" secondAttribute="centerX" id="Z0V-iw-0wD"/>
-                            <constraint firstItem="SLC-MP-LGi" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="g0Y-sd-tSb"/>
-                            <constraint firstItem="8TR-BM-FrI" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="gh0-Em-AY2"/>
-                            <constraint firstItem="Doo-0h-aYe" firstAttribute="top" secondItem="8TR-BM-FrI" secondAttribute="bottom" constant="8" symbolic="YES" id="ibE-Op-e1C"/>
+                            <constraint firstAttribute="bottom" secondItem="SLC-MP-LGi" secondAttribute="bottom" id="Si9-gU-qVy"/>
+                            <constraint firstItem="8TR-BM-FrI" firstAttribute="leading" secondItem="Doo-0h-aYe" secondAttribute="leading" id="hfO-BM-NLF"/>
+                            <constraint firstItem="8TR-BM-FrI" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="137" id="jMD-2h-fFG"/>
+                            <constraint firstItem="SLC-MP-LGi" firstAttribute="top" secondItem="3aI-Ot-jrf" secondAttribute="bottom" constant="8" symbolic="YES" id="jdu-58-iHe"/>
                             <constraint firstItem="LMi-7S-pHJ" firstAttribute="top" secondItem="LXK-l3-WdN" secondAttribute="bottom" constant="41" id="kiM-Ch-PtD"/>
-                            <constraint firstItem="Doo-0h-aYe" firstAttribute="leading" secondItem="8TR-BM-FrI" secondAttribute="leading" id="t10-e5-T2l"/>
+                            <constraint firstItem="Doo-0h-aYe" firstAttribute="trailing" secondItem="8TR-BM-FrI" secondAttribute="trailing" id="nV5-cs-ztB"/>
+                            <constraint firstItem="Nkw-UO-z1K" firstAttribute="leading" secondItem="SLC-MP-LGi" secondAttribute="leading" id="sib-GB-drp"/>
+                            <constraint firstItem="Nkw-UO-z1K" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="tuw-4F-nPl"/>
+                            <constraint firstItem="8TR-BM-FrI" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="wzd-Of-FLh"/>
+                            <constraint firstItem="Doo-0h-aYe" firstAttribute="top" secondItem="8TR-BM-FrI" secondAttribute="bottom" constant="8" symbolic="YES" id="x0n-oH-NP5"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
