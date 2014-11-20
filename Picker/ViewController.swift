@@ -22,7 +22,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     var backupRgbValues: [Int] = [46,204,113] //For Background RGB values when the switch state is changes
     var backupRgbValuesLabel: [Int] = [255,255,255] // For Label RGB values when the switch state is changed
     
-    var pickerColor: UIColor = UIColor(red: 46/255.0, green: 204/255.0, blue: 113/255.0, alpha: 0.5)
+    var pickerColor: UIColor = UIColor(red: 46/255.0 + (46/255.0)/3.0, green: 204/255.0 + (204/255.0)/3.0, blue: 113/255.0 + (113/255.0)/3.0, alpha: 0.5)
     var backgroundColor: UIColor = UIColor(red: 46/255.0, green: 204/255.0, blue: 113/255.0, alpha: 1.0)
     var textColor: UIColor = UIColor(red: 236.0/255.0, green: 240/255.0, blue: 241/255.0, alpha: 1.0)
     
