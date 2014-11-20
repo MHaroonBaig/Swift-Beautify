@@ -11,7 +11,7 @@ import UIKit
 class FontStylingsViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
     var data: [String]!
-    var currentSelection:Int = 6
+    var currentSelection:Int!
     
     
     var pickerBackground2:UIColor!
@@ -67,6 +67,15 @@ class FontStylingsViewController: UIViewController, UIPickerViewDataSource, UIPi
         
         data = sorted (fontNames, {(s1: String, s2:String) -> Bool in return s1 < s2 })
         
+        if currentSelection == nil{
+            for i in 0...(data.count) - 1 {
+                if data[i] == "AppleSDGothicNeo-Light"{
+                    currentSelection = i
+                    break
+                }
+            }
+        }
+        
         myPickerView2.backgroundColor = pickerBackground2
         myHeadingLabel.textColor = labelBackgroundColor
         self.view.backgroundColor = backgroundColor2
@@ -74,6 +83,7 @@ class FontStylingsViewController: UIViewController, UIPickerViewDataSource, UIPi
         myPickerView2.selectRow(currentSelection, inComponent: 0, animated: true)
         
     }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -14,8 +14,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     var rgbValues: [[Int]] = [[0], [0], [0]] // This contains the content of each row of a component. Each row is having numbers ranging from 0 to 255
     var switchTrigger: Bool = true
     
-    var fontFamily = UIFont(name: "STHeitiSC-Medium", size: 45.0)
-    var currentSelection2:Int = 6
+    var fontFamily = UIFont(name: "AppleSDGothicNeo-Light", size: 45.0)
+    var currentSelection2:Int!
     
     
     var rgbBackground: [Int] = [255,255,255] // Populated by each component of a picker
@@ -261,23 +261,27 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         self.view.backgroundColor = backgroundColor
         
         // Populating the RGB values
-        for counter in 0...2{
-            for i in 1...255{
-                rgbValues[counter].append(i)
-            }
+              
+        var index = 0
+        for i in 1...255{
+            rgbValues[index].append(i)
+            rgbValues[index + 1].append(i)
+            rgbValues[index + 2].append(i)
+            index = 0
         }
         
+       
         for i in 0...2{
             myPicker.selectRow(backupRgbValues[i], inComponent:i, animated: true)
             rgbBackground[i] = backupRgbValues[i]
         }
         
-        
     }
+    
     override func viewDidAppear(animated: Bool) {
         sideBar = SideBar(sourceView: self.view, menuItems: ["Turquoise", "Greensea", "Emerland", "Nephritis", "Peterriver", "Belizehole", "Amethyst", "Wisteria", "Wetasphalt", "Midnightblue", "Sunflower", "Orange", "Carrot", "Pumpkin", "Alizarin", "Pomegranate", "Clouds", "Silver", "Concrete", "Asbestos", "Wistful", "Snuff"])
         sideBar.delegate = self
-
+        
     }
     
     override func didReceiveMemoryWarning() {
