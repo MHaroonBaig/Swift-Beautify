@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="c3C-vc-EjE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="c3C-vc-EjE">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
@@ -160,19 +160,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oL3-1L-HMD">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oL3-1L-HMD">
                                 <fontDescription key="fontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="20"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r0r-Qk-O5p">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r0r-Qk-O5p">
                                 <fontDescription key="fontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Lorem ipsum dolor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ftW-xx-T4s">
-                                <rect key="frame" x="16" y="129" width="568" height="49"/>
-                                <fontDescription key="fontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="45"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -183,21 +177,25 @@
                                     <outlet property="delegate" destination="AV0-75-ARa" id="QHB-NZ-Y5I"/>
                                 </connections>
                             </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ftW-xx-T4s">
+                                <rect key="frame" x="16" y="126" width="568" height="49"/>
+                                <fontDescription key="fontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="45"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="q2x-vC-nh7" firstAttribute="bottom" secondItem="NBn-yk-64W" secondAttribute="top" id="2GN-WW-MF8"/>
-                            <constraint firstAttribute="trailing" secondItem="q2x-vC-nh7" secondAttribute="trailing" id="7rC-zl-j8A"/>
-                            <constraint firstItem="ftW-xx-T4s" firstAttribute="top" secondItem="Wia-TW-TbR" secondAttribute="bottom" constant="109" id="CbS-Q9-z77"/>
-                            <constraint firstItem="ftW-xx-T4s" firstAttribute="leading" secondItem="oL3-1L-HMD" secondAttribute="leading" id="IhV-G9-eVh"/>
-                            <constraint firstItem="q2x-vC-nh7" firstAttribute="leading" secondItem="6pc-jw-fsG" secondAttribute="leading" id="PNV-Pv-AZz"/>
-                            <constraint firstItem="oL3-1L-HMD" firstAttribute="leading" secondItem="6pc-jw-fsG" secondAttribute="leadingMargin" id="RXe-R3-qKd"/>
-                            <constraint firstItem="r0r-Qk-O5p" firstAttribute="trailing" secondItem="oL3-1L-HMD" secondAttribute="trailing" id="SBq-jW-F8S"/>
-                            <constraint firstItem="oL3-1L-HMD" firstAttribute="leading" secondItem="r0r-Qk-O5p" secondAttribute="leading" id="iLm-K1-E2O"/>
-                            <constraint firstItem="oL3-1L-HMD" firstAttribute="trailing" secondItem="ftW-xx-T4s" secondAttribute="trailing" id="knG-Vq-8DM"/>
-                            <constraint firstItem="oL3-1L-HMD" firstAttribute="top" secondItem="ftW-xx-T4s" secondAttribute="bottom" constant="15" id="qV7-lo-nQ3"/>
-                            <constraint firstItem="q2x-vC-nh7" firstAttribute="centerX" secondItem="r0r-Qk-O5p" secondAttribute="centerX" id="r6R-fs-Qo0"/>
-                            <constraint firstItem="r0r-Qk-O5p" firstAttribute="top" secondItem="oL3-1L-HMD" secondAttribute="bottom" constant="16" id="sXt-tT-LFh"/>
+                            <constraint firstItem="ftW-xx-T4s" firstAttribute="centerX" secondItem="q2x-vC-nh7" secondAttribute="centerX" id="5fD-Oy-FYh"/>
+                            <constraint firstAttribute="trailing" secondItem="q2x-vC-nh7" secondAttribute="trailing" id="BGJ-Fx-VDG"/>
+                            <constraint firstItem="q2x-vC-nh7" firstAttribute="bottom" secondItem="NBn-yk-64W" secondAttribute="top" id="BkQ-SK-aSC"/>
+                            <constraint firstItem="r0r-Qk-O5p" firstAttribute="baseline" secondItem="oL3-1L-HMD" secondAttribute="baseline" id="Ci3-9x-uai"/>
+                            <constraint firstItem="ftW-xx-T4s" firstAttribute="leading" secondItem="6pc-jw-fsG" secondAttribute="leadingMargin" id="KKg-40-QJO"/>
+                            <constraint firstItem="r0r-Qk-O5p" firstAttribute="leading" secondItem="q2x-vC-nh7" secondAttribute="leading" id="Lar-Ga-fls"/>
+                            <constraint firstItem="oL3-1L-HMD" firstAttribute="leading" secondItem="r0r-Qk-O5p" secondAttribute="leading" id="O1s-KA-x5y"/>
+                            <constraint firstItem="r0r-Qk-O5p" firstAttribute="top" secondItem="6pc-jw-fsG" secondAttribute="top" id="aG2-tX-dki"/>
+                            <constraint firstItem="q2x-vC-nh7" firstAttribute="leading" secondItem="6pc-jw-fsG" secondAttribute="leading" id="nE0-gU-UwY"/>
+                            <constraint firstItem="ftW-xx-T4s" firstAttribute="top" secondItem="Wia-TW-TbR" secondAttribute="bottom" constant="106" id="rcB-D4-OV1"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -237,13 +235,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="finalImage" translatesAutoresizingMaskIntoConstraints="NO" id="SyB-PL-Jun">
+                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="finalImage" translatesAutoresizingMaskIntoConstraints="NO" id="SyB-PL-Jun">
                                 <rect key="frame" x="167" y="251" width="266" height="175"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="266" id="zET-Pe-5fG"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="I love this" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2h-TG-mDj">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I love this" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c2h-TG-mDj">
                                 <rect key="frame" x="16" y="158" width="568" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="54b-T7-VWS"/>
@@ -313,7 +311,7 @@
         <image name="finalImage" width="2400" height="2400"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="xj9-a4-RqY"/>
+        <segue reference="sse-Xv-xc0"/>
         <segue reference="0R6-AH-cxc"/>
     </inferredMetricsTieBreakers>
 </document>
