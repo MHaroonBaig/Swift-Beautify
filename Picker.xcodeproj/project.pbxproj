@@ -14,7 +14,6 @@
 		759675621A09022800406914 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759675611A09022800406914 /* ViewController.swift */; };
 		759675651A09022800406914 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 759675631A09022800406914 /* Main.storyboard */; };
 		759675671A09022800406914 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 759675661A09022800406914 /* Images.xcassets */; };
-		7596756A1A09022800406914 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 759675681A09022800406914 /* LaunchScreen.xib */; };
 		759675761A09022800406914 /* PickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759675751A09022800406914 /* PickerTests.swift */; };
 		75BE67601A176689004ACE6E /* SideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BE675E1A176689004ACE6E /* SideBar.swift */; };
 		75BE67611A176689004ACE6E /* SideBarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BE675F1A176689004ACE6E /* SideBarTableViewController.swift */; };
@@ -40,7 +39,6 @@
 		759675611A09022800406914 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		759675641A09022800406914 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		759675661A09022800406914 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		759675691A09022800406914 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		7596756F1A09022800406914 /* PickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PickerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		759675741A09022800406914 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		759675751A09022800406914 /* PickerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerTests.swift; sourceTree = "<group>"; };
@@ -96,7 +94,6 @@
 				7500F66C1A16299D009DA3F4 /* DoneViewController.swift */,
 				7500F66E1A168067009DA3F4 /* SweetAlert.swift */,
 				759675661A09022800406914 /* Images.xcassets */,
-				759675681A09022800406914 /* LaunchScreen.xib */,
 				7596755D1A09022800406914 /* Supporting Files */,
 			);
 			path = Picker;
@@ -208,7 +205,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				759675651A09022800406914 /* Main.storyboard in Resources */,
-				7596756A1A09022800406914 /* LaunchScreen.xib in Resources */,
 				759675671A09022800406914 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,14 +258,6 @@
 				759675641A09022800406914 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		759675681A09022800406914 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				759675691A09022800406914 /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -356,6 +344,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = Picker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -367,6 +356,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = Picker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

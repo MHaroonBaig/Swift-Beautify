@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="c3C-vc-EjE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6221" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="c3C-vc-EjE">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -75,7 +75,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999964" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nkw-UO-z1K">
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999964" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nkw-UO-z1K">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -96,16 +96,16 @@
                             <constraint firstItem="8TR-BM-FrI" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="19K-ev-KQb"/>
                             <constraint firstItem="LMi-7S-pHJ" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="2bQ-9G-uBa"/>
                             <constraint firstItem="Doo-0h-aYe" firstAttribute="trailing" secondItem="8TR-BM-FrI" secondAttribute="trailing" id="2gP-mi-FLO"/>
-                            <constraint firstItem="8TR-BM-FrI" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="93" id="3Ch-7n-Shb"/>
+                            <constraint firstItem="8TR-BM-FrI" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="137" id="3Ch-7n-Shb"/>
                             <constraint firstItem="SLC-MP-LGi" firstAttribute="top" secondItem="3aI-Ot-jrf" secondAttribute="bottom" constant="8" symbolic="YES" id="4Ds-BC-QB6"/>
                             <constraint firstItem="LXK-l3-WdN" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-32" id="84I-v3-yok"/>
-                            <constraint firstItem="Nkw-UO-z1K" firstAttribute="top" secondItem="Doo-0h-aYe" secondAttribute="bottom" constant="8" symbolic="YES" id="BNH-Oz-VVH"/>
-                            <constraint firstItem="Nkw-UO-z1K" firstAttribute="centerX" secondItem="Doo-0h-aYe" secondAttribute="centerX" id="Ihn-sx-Ouu"/>
+                            <constraint firstItem="Nkw-UO-z1K" firstAttribute="top" secondItem="Doo-0h-aYe" secondAttribute="bottom" constant="-267" id="BNH-Oz-VVH"/>
+                            <constraint firstItem="Nkw-UO-z1K" firstAttribute="centerX" secondItem="Doo-0h-aYe" secondAttribute="centerX" constant="-300" id="Ihn-sx-Ouu"/>
                             <constraint firstAttribute="trailing" secondItem="SLC-MP-LGi" secondAttribute="trailing" id="OPQ-iT-7S7"/>
                             <constraint firstItem="LXK-l3-WdN" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="OiH-5v-Xpd"/>
                             <constraint firstItem="3aI-Ot-jrf" firstAttribute="centerX" secondItem="SLC-MP-LGi" secondAttribute="centerX" id="Qag-l1-yPz"/>
                             <constraint firstItem="LXK-l3-WdN" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="36" id="S5r-St-MDA"/>
-                            <constraint firstItem="SLC-MP-LGi" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="Soa-la-Vmp"/>
+                            <constraint firstItem="SLC-MP-LGi" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" constant="44" id="Soa-la-Vmp"/>
                             <constraint firstItem="8TR-BM-FrI" firstAttribute="centerX" secondItem="3aI-Ot-jrf" secondAttribute="centerX" id="Z0V-iw-0wD"/>
                             <constraint firstItem="SLC-MP-LGi" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="g0Y-sd-tSb"/>
                             <constraint firstItem="8TR-BM-FrI" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="gh0-Em-AY2"/>
@@ -121,6 +121,11 @@
                                 <exclude reference="LXK-l3-WdN"/>
                                 <exclude reference="LMi-7S-pHJ"/>
                                 <exclude reference="hcr-WQ-Sov"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="84I-v3-yok"/>
+                                <exclude reference="OiH-5v-Xpd"/>
+                                <exclude reference="kiM-Ch-PtD"/>
                             </mask>
                         </variation>
                     </view>
@@ -312,6 +317,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="sse-Xv-xc0"/>
-        <segue reference="0R6-AH-cxc"/>
+        <segue reference="zUL-37-MXm"/>
     </inferredMetricsTieBreakers>
 </document>
