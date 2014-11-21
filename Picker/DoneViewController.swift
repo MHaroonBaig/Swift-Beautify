@@ -48,9 +48,9 @@ class DoneViewController: UIViewController, UIAlertViewDelegate{
         let finalUsername = username! as NSString
         
         if finalUsername.length > 1 {
-        let defaults = NSUserDefaults()
-        defaults.setObject(username, forKey: "name")
-        defaults.synchronize()
+            let defaults = NSUserDefaults()
+            defaults.setObject(username, forKey: "name")
+            defaults.synchronize()
         }
     }
     
@@ -71,11 +71,6 @@ class DoneViewController: UIViewController, UIAlertViewDelegate{
         self.view.backgroundColor = finalBackgroundColor
         mylabel.textColor = finalLabelColor
         mylabel.font = finalLabelFont
-        mylabel.fadeOut(completion: {
-            (finished: Bool) -> Void in
-            self.mylabel.text = "Lorem Ipsum Dolor"
-            self.mylabel.fadeIn()
-        })
         
         aboutButton.tintColor = finalLabelColor
         var labelColor: String = finalLabelColor.description
@@ -110,6 +105,12 @@ class DoneViewController: UIViewController, UIAlertViewDelegate{
         super.viewDidAppear(animated)
         let getDefault = NSUserDefaults()
         let name = getDefault.objectForKey("name") as NSString!
+        
+        mylabel.fadeOut(completion: {
+            (finished: Bool) -> Void in
+            self.mylabel.text = "Lorem Ipsum Dolor"
+            self.mylabel.fadeIn()
+        })
         
         if let username = name {
             myNameLabel.textColor = finalLabelColor
