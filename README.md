@@ -27,4 +27,4 @@ In short, a user can make the interface of his own choice :yum:
 - [x] Final animated result at the end
 
 ---
-Compiled on Xcode 6.1, Optimised both for iPhones and iPads running iOS 7 or later :yum:
+Compiled on Xcode 6.1 and the beta version 6.2, Optimised both for iPhones and iPads running iOS 7 or later :yum:
