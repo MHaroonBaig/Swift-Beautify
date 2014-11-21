@@ -246,7 +246,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="finalImage" translatesAutoresizingMaskIntoConstraints="NO" id="SyB-PL-Jun">
+                            <imageView userInteractionEnabled="NO" alpha="0.89999999999999991" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="finalImage" translatesAutoresizingMaskIntoConstraints="NO" id="SyB-PL-Jun">
                                 <rect key="frame" x="167" y="251" width="266" height="175"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="266" id="zET-Pe-5fG"/>

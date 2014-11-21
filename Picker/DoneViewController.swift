@@ -32,18 +32,20 @@ class DoneViewController: UIViewController, UIAlertViewDelegate{
     var finalLabelFont: UIFont!
     var finalValueMessage: String!
     
+    
     @IBOutlet weak var myAddButton: UIButton!
     
     @IBOutlet weak var myNameLabel: UILabel!
     @IBOutlet weak var mylabel: UILabel!
     
     @IBAction func addName(sender: AnyObject) {
-        var alert = UIAlertView(title: "Hi There", message: "Please Enter Your Name", delegate: self, cancelButtonTitle: "Thanks")
+        var alert: UIAlertView!
+        alert = UIAlertView(title: "Hi mate", message: "Please Enter Your Name", delegate: self, cancelButtonTitle: "Done")
         alert.alertViewStyle = UIAlertViewStyle.PlainTextInput
         alert.show()
-    }
-    
-    func alertView(alertView: UIAlertView, didDismissWithButtonIndex buttonIndex: Int) {
+   }
+  
+   func alertView(alertView: UIAlertView, didDismissWithButtonIndex buttonIndex: Int) {
         var username = alertView.textFieldAtIndex(0)?.text!
         let finalUsername = username! as NSString
         
