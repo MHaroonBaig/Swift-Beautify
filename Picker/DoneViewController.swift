@@ -23,7 +23,7 @@ extension UIView {
     }
 }
 
-class DoneViewController: UIViewController {
+class DoneViewController: UIViewController, UIAlertViewDelegate{
     
     
     var alertButtonColor: UIColor!
@@ -32,8 +32,23 @@ class DoneViewController: UIViewController {
     var finalLabelFont: UIFont!
     var finalValueMessage: String!
     
+    @IBOutlet weak var myAddButton: UIButton!
     
+    @IBOutlet weak var myNameLabel: UILabel!
     @IBOutlet weak var mylabel: UILabel!
+    
+    @IBAction func addName(sender: AnyObject) {
+        var alert = UIAlertView(title: "Hi There", message: "Please Enter Your Name", delegate: self, cancelButtonTitle: "Thanks")
+        alert.alertViewStyle = UIAlertViewStyle.PlainTextInput
+        alert.show()
+    }
+    
+    func alertView(alertView: UIAlertView, didDismissWithButtonIndex buttonIndex: Int) {
+        var username = alertView.textFieldAtIndex(0)?.text!
+        let defaults = NSUserDefaults()
+        defaults.setObject(username, forKey: "name")
+        defaults.synchronize()
+    }
     
     @IBOutlet weak var aboutButton: UIButton!
     @IBAction func aboutView(sender: AnyObject) {
@@ -54,7 +69,7 @@ class DoneViewController: UIViewController {
         mylabel.font = finalLabelFont
         mylabel.fadeOut(completion: {
             (finished: Bool) -> Void in
-            self.mylabel.text = "Lorem Ipsum"
+            self.mylabel.text = "Lorem Ipsum Dolor"
             self.mylabel.fadeIn()
         })
         
@@ -83,7 +98,23 @@ class DoneViewController: UIViewController {
         var fontName = "Awesome Font: "+finalLabelFont.fontName
         
         finalValueMessage = "\(backgroundString)\n\(labelString)\n\(fontName)\n\n*Color values are in RGB"
+        myAddButton.tintColor = finalLabelColor
+    }
+    
+    override func viewDidAppear(animated: Bool) {
         
+        super.viewDidAppear(animated)
+        let getDefault = NSUserDefaults()
+        let name = getDefault.objectForKey("name") as NSString!
+        if let username = name {
+            myNameLabel.textColor = finalLabelColor
+            myNameLabel.font = UIFont(name: "AppleSDGothicNeo-Thin", size: 45.0)
+            myNameLabel.fadeOut(completion: { (Bool) -> Void in
+                self.myNameLabel.text = "Good choice " + username + " !"
+                self.myNameLabel.fadeIn(completion:{(Bool) -> Void in self.myNameLabel.fadeOut()
+                })
+            })
+        }
     }
     
     override func didReceiveMemoryWarning() {

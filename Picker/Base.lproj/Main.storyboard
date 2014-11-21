@@ -252,7 +252,7 @@
                                     <constraint firstAttribute="width" constant="266" id="zET-Pe-5fG"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I love this" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c2h-TG-mDj">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I love this" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.30000000000000004" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c2h-TG-mDj">
                                 <rect key="frame" x="16" y="158" width="568" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="54b-T7-VWS"/>
@@ -270,12 +270,33 @@
                                     <action selector="aboutView:" destination="CAb-TE-gOE" eventType="touchUpInside" id="rlO-Ln-oAY"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LTT-Df-sDj">
+                                <rect key="frame" x="16" y="517" width="22" height="22"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addName:" destination="CAb-TE-gOE" eventType="touchUpInside" id="dqL-uv-Rj5"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.49999999999999961" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PVr-n9-pr4">
+                                <rect key="frame" x="13" y="60" width="574" height="90"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="c2h-TG-mDj" firstAttribute="top" secondItem="PVr-n9-pr4" secondAttribute="bottom" constant="8" symbolic="YES" id="2bZ-os-8X0"/>
                             <constraint firstItem="SyB-PL-Jun" firstAttribute="top" secondItem="c2h-TG-mDj" secondAttribute="bottom" constant="13" id="B1B-ke-FJ4"/>
+                            <constraint firstItem="LTT-Df-sDj" firstAttribute="leading" secondItem="c2h-TG-mDj" secondAttribute="leading" id="BAD-OJ-ELt"/>
+                            <constraint firstItem="PVr-n9-pr4" firstAttribute="centerX" secondItem="c2h-TG-mDj" secondAttribute="centerX" id="LBS-gF-zDS"/>
+                            <constraint firstItem="PVr-n9-pr4" firstAttribute="leading" secondItem="bNF-AQ-XR3" secondAttribute="leadingMargin" constant="-3" id="O8Z-ku-t7i"/>
                             <constraint firstItem="K51-JR-1Ir" firstAttribute="top" secondItem="SyB-PL-Jun" secondAttribute="bottom" constant="130" id="Uoz-fi-IF6"/>
                             <constraint firstItem="K51-JR-1Ir" firstAttribute="top" secondItem="fNt-Xr-0mZ" secondAttribute="bottom" constant="17" id="byM-9Y-58v"/>
+                            <constraint firstItem="PVr-n9-pr4" firstAttribute="top" secondItem="xGi-Rn-ZF3" secondAttribute="bottom" constant="40" id="eD9-uu-Ev0"/>
+                            <constraint firstItem="LTT-Df-sDj" firstAttribute="top" secondItem="fNt-Xr-0mZ" secondAttribute="top" id="mQH-EB-T3c"/>
                             <constraint firstItem="c2h-TG-mDj" firstAttribute="leading" secondItem="bNF-AQ-XR3" secondAttribute="leadingMargin" id="of2-Jf-pOJ"/>
                             <constraint firstItem="fNt-Xr-0mZ" firstAttribute="trailing" secondItem="bNF-AQ-XR3" secondAttribute="trailingMargin" id="rfy-J9-tha"/>
                             <constraint firstItem="c2h-TG-mDj" firstAttribute="trailing" secondItem="bNF-AQ-XR3" secondAttribute="trailingMargin" id="sKm-LJ-qrc"/>
@@ -292,6 +313,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="aboutButton" destination="fNt-Xr-0mZ" id="M5U-Ts-O0I"/>
+                        <outlet property="myAddButton" destination="LTT-Df-sDj" id="3h9-CB-z3n"/>
+                        <outlet property="myNameLabel" destination="PVr-n9-pr4" id="9Y3-Ym-mcb"/>
                         <outlet property="mylabel" destination="c2h-TG-mDj" id="clM-N2-eho"/>
                     </connections>
                 </viewController>
@@ -323,6 +346,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="sse-Xv-xc0"/>
-        <segue reference="0R6-AH-cxc"/>
+        <segue reference="zUL-37-MXm"/>
     </inferredMetricsTieBreakers>
 </document>
