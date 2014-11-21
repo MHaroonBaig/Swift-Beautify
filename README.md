@@ -6,8 +6,9 @@ values through a wheel. User can change the color of the font too, by triggering
 In short, a user can make the interface of his own choice :yum:
 
 ##Demo
+<p align="center">
 <img src="Screenshots/screencast.gif" alt="Demo">
-
+</p>
 ##Screenshots
 <img src="Screenshots/shot1.png" alt="First Screen"> <img src="Screenshots/shot2.png" alt="Second Screen"> <img src="Screenshots/shot3.png" alt="Third Screen">
 <br>
