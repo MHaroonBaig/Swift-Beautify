@@ -45,9 +45,13 @@ class DoneViewController: UIViewController, UIAlertViewDelegate{
     
     func alertView(alertView: UIAlertView, didDismissWithButtonIndex buttonIndex: Int) {
         var username = alertView.textFieldAtIndex(0)?.text!
+        let finalUsername = username! as NSString
+        
+        if finalUsername.length > 1 {
         let defaults = NSUserDefaults()
         defaults.setObject(username, forKey: "name")
         defaults.synchronize()
+        }
     }
     
     @IBOutlet weak var aboutButton: UIButton!
@@ -106,6 +110,7 @@ class DoneViewController: UIViewController, UIAlertViewDelegate{
         super.viewDidAppear(animated)
         let getDefault = NSUserDefaults()
         let name = getDefault.objectForKey("name") as NSString!
+        
         if let username = name {
             myNameLabel.textColor = finalLabelColor
             myNameLabel.font = UIFont(name: "AppleSDGothicNeo-Thin", size: 45.0)
