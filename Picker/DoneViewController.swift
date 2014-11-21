@@ -78,11 +78,11 @@ class DoneViewController: UIViewController {
             alertButtonColor = finalBackgroundColor
         }
         
-        var backgroundString: String = "Background: (\(backgroundRed), \(backgroundGreen), \(backgroundBlue))"
+        var backgroundString: String = "Background color: (\(backgroundRed), \(backgroundGreen), \(backgroundBlue))"
         var labelString: String = "Text color: (\(labelRed), \(labelGreen), \(labelBlue))"
         var fontName = "Awesome Font: "+finalLabelFont.fontName
         
-        finalValueMessage = "\(backgroundString)\n\(labelString)\n\(fontName)\n\n*Values are in RGB"
+        finalValueMessage = "\(backgroundString)\n\(labelString)\n\(fontName)\n\n*Color values are in RGB"
         
     }
     
