@@ -24,7 +24,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     var pickerColor: UIColor = UIColor(red: 46/255.0 + (46/255.0)/3.0, green: 204/255.0 + (204/255.0)/3.0, blue: 113/255.0 + (113/255.0)/3.0, alpha: 0.5)
     var backgroundColor: UIColor = UIColor(red: 46/255.0, green: 204/255.0, blue: 113/255.0, alpha: 1.0)
-    var textColor: UIColor = UIColor(red: 236.0/255.0, green: 240/255.0, blue: 241/255.0, alpha: 1.0)
+    var textColor: UIColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
     
     var bgString: String = "" // This is to set the Background RGB label text
     var message2: String = " " //Just a handful string to house all the integer rgb values by converting them into a String
