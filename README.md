@@ -30,4 +30,4 @@ In short, a user can make the interface of his own choice :yum:
 - [x] Final animated result at the end
 
 ---
-Compiled on Xcode 6.1 and the beta version 6.2, Optimised both for iPhones and iPads running iOS 7 or later :yum:
+Compiled on Xcode 6.2(beta), works fine on the 6.1 too (without the new unwrapping rules introduced in 6.2). Optimised both for iPhones and iPads running iOS 7 or later :yum:

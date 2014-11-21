@@ -24,7 +24,7 @@ extension UIView {
 }
 
 class DoneViewController: UIViewController, UIAlertViewDelegate{
-   
+    
     var alertButtonColor: UIColor!
     var finalLabelColor:UIColor!
     var finalBackgroundColor: UIColor!
@@ -41,9 +41,9 @@ class DoneViewController: UIViewController, UIAlertViewDelegate{
         alert = UIAlertView(title: "Hi mate", message: "Please Enter Your Name", delegate: self, cancelButtonTitle: "Done")
         alert.alertViewStyle = UIAlertViewStyle.PlainTextInput
         alert.show()
-   }
-  
-   func alertView(alertView: UIAlertView, didDismissWithButtonIndex buttonIndex: Int) {
+    }
+    
+    func alertView(alertView: UIAlertView, didDismissWithButtonIndex buttonIndex: Int) {
         var username = alertView.textFieldAtIndex(0)?.text!
         let finalUsername = username! as NSString
         
@@ -105,7 +105,7 @@ class DoneViewController: UIViewController, UIAlertViewDelegate{
         super.viewDidAppear(animated)
         let getDefault = NSUserDefaults()
         let name = getDefault.objectForKey("name") as NSString!
-    
+        
         if let username = name {
             myNameLabel.textColor = finalLabelColor
             myNameLabel.font = UIFont(name: "AppleSDGothicNeo-Thin", size: 45.0)
