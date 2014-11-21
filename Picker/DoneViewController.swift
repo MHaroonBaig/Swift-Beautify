@@ -24,8 +24,7 @@ extension UIView {
 }
 
 class DoneViewController: UIViewController, UIAlertViewDelegate{
-    
-    
+   
     var alertButtonColor: UIColor!
     var finalLabelColor:UIColor!
     var finalBackgroundColor: UIColor!
@@ -34,7 +33,6 @@ class DoneViewController: UIViewController, UIAlertViewDelegate{
     
     
     @IBOutlet weak var myAddButton: UIButton!
-    
     @IBOutlet weak var myNameLabel: UILabel!
     @IBOutlet weak var mylabel: UILabel!
     
@@ -107,13 +105,7 @@ class DoneViewController: UIViewController, UIAlertViewDelegate{
         super.viewDidAppear(animated)
         let getDefault = NSUserDefaults()
         let name = getDefault.objectForKey("name") as NSString!
-        
-        mylabel.fadeOut(completion: {
-            (finished: Bool) -> Void in
-            self.mylabel.text = "Lorem Ipsum Dolor"
-            self.mylabel.fadeIn()
-        })
-        
+    
         if let username = name {
             myNameLabel.textColor = finalLabelColor
             myNameLabel.font = UIFont(name: "AppleSDGothicNeo-Thin", size: 45.0)
@@ -123,6 +115,13 @@ class DoneViewController: UIViewController, UIAlertViewDelegate{
                 })
             })
         }
+        
+        mylabel.fadeOut(completion: {
+            (finished: Bool) -> Void in
+            self.mylabel.text = "Lorem Ipsum Dolor"
+            self.mylabel.fadeIn()
+        })
+        
     }
     
     override func didReceiveMemoryWarning() {
