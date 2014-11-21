@@ -20,6 +20,8 @@ In short, a user can make the interface of his own choice :yum:
 - [x] [Flat] (https://gist.githubusercontent.com/wildlyinaccurate/5137255/raw/ae831aaae8676ba5d7f9cc0fe74cb248562d598c/flat-ui-colours.txt) background coloring variations
 - [x] Text color variations
 - [x] Taste of all the available iOS fonts
+- [x] Use of the new Blur View introduced in iOS8
+- [x] Addition of UIDynamics introduced in iOS7
 - [x] RGB representations of each variation
 - [x] Dynamic variations in the Font Family
 - [x] Variations in the Font Style
