@@ -53,14 +53,17 @@ class SweetAlert: UIViewController {
     }
     
     func setupContentView() {
-        contentView.backgroundColor = UIColor(white: 1.0, alpha: 1.0)
+        //contentView.backgroundColor = UIColor(white: 1.0, alpha: 1.0)
+        
         contentView.layer.cornerRadius = 5.0
         contentView.layer.masksToBounds = true
         contentView.layer.borderWidth = 0.5
         contentView.addSubview(titleLabel)
         contentView.addSubview(subTitleTextView)
-        contentView.backgroundColor = UIColorFromRGB(0xFFFFFF)
-        contentView.layer.borderColor = UIColorFromRGB(0xCCCCCC).CGColor
+        //contentView.backgroundColor = UIColorFromRGB(0xFFFFFF)
+        contentView.backgroundColor = UIColor.clearColor()
+        //contentView.layer.borderColor = UIColorFromRGB(0xCCCCCC).CGColor
+        contentView.layer.borderColor = UIColor.clearColor().CGColor
         view.addSubview(contentView)
     }
     
@@ -79,12 +82,24 @@ class SweetAlert: UIViewController {
     func setupSubtitleTextView() {
         subTitleTextView.text = ""
         subTitleTextView.textAlignment = .Center
+        subTitleTextView.backgroundColor = UIColor.clearColor()
         subTitleTextView.font = UIFont(name: kFont, size:16)
-        subTitleTextView.textColor = UIColorFromRGB(0x797979)
+        //subTitleTextView.textColor = UIColorFromRGB(0x797979)
+        subTitleTextView.textColor = UIColor.blackColor()
         subTitleTextView.editable = false
+        
+        // Mark: Vibrancy Effects
+        var vibran = UIVibrancyEffect(forBlurEffect: UIBlurEffect(style: UIBlurEffectStyle.ExtraLight))
+        var vibranView = UIVisualEffectView(effect: vibran)
+        vibranView.contentView.addSubview(subTitleTextView)
     }
     
     func resizeAndRelayout() {
+        // Mark: Blur Effects
+        var blur = UIBlurEffect(style: UIBlurEffectStyle.Light)
+        var visual = UIVisualEffectView(effect: blur)
+        visual.frame = contentView.bounds
+        contentView.addSubview(visual)
         
         var mainScreenBounds = UIScreen.mainScreen().bounds
         self.view.frame.size = mainScreenBounds.size
