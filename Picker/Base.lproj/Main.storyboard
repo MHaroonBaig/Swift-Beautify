@@ -106,7 +106,9 @@
                             <constraint firstItem="Doo-0h-aYe" firstAttribute="trailing" secondItem="8TR-BM-FrI" secondAttribute="trailing" id="FGw-2l-4fN"/>
                             <constraint firstItem="SLC-MP-LGi" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="FKS-fR-Q4J"/>
                             <constraint firstItem="Nkw-UO-z1K" firstAttribute="leading" secondItem="SLC-MP-LGi" secondAttribute="leading" id="FPk-vS-7Si"/>
-                            <constraint firstItem="8TR-BM-FrI" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="137" id="G6F-fE-OJl"/>
+                            <constraint firstItem="8TR-BM-FrI" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="137" id="G6F-fE-OJl">
+                                <variation key="heightClass=regular-widthClass=compact" constant="62"/>
+                            </constraint>
                             <constraint firstItem="Nkw-UO-z1K" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="MMX-Tt-jBT"/>
                             <constraint firstItem="LXK-l3-WdN" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="OiH-5v-Xpd"/>
                             <constraint firstItem="LXK-l3-WdN" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="36" id="S5r-St-MDA"/>
@@ -114,7 +116,9 @@
                             <constraint firstItem="8TR-BM-FrI" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="b0n-iA-JLx"/>
                             <constraint firstAttribute="trailing" secondItem="SLC-MP-LGi" secondAttribute="trailing" id="c7a-ez-eVH"/>
                             <constraint firstItem="LMi-7S-pHJ" firstAttribute="top" secondItem="LXK-l3-WdN" secondAttribute="bottom" constant="41" id="kiM-Ch-PtD"/>
-                            <constraint firstItem="Doo-0h-aYe" firstAttribute="top" secondItem="8TR-BM-FrI" secondAttribute="bottom" constant="8" symbolic="YES" id="mrs-fo-eQJ"/>
+                            <constraint firstItem="Doo-0h-aYe" firstAttribute="top" secondItem="8TR-BM-FrI" secondAttribute="bottom" constant="8" symbolic="YES" id="mrs-fo-eQJ">
+                                <variation key="heightClass=regular-widthClass=compact" constant="83"/>
+                            </constraint>
                             <constraint firstItem="Doo-0h-aYe" firstAttribute="leading" secondItem="8TR-BM-FrI" secondAttribute="leading" id="xjw-DX-8Eo"/>
                         </constraints>
                         <variation key="default">
@@ -206,7 +210,9 @@
                             <constraint firstItem="oL3-1L-HMD" firstAttribute="leading" secondItem="r0r-Qk-O5p" secondAttribute="leading" id="O1s-KA-x5y"/>
                             <constraint firstItem="r0r-Qk-O5p" firstAttribute="top" secondItem="6pc-jw-fsG" secondAttribute="top" id="aG2-tX-dki"/>
                             <constraint firstItem="q2x-vC-nh7" firstAttribute="leading" secondItem="6pc-jw-fsG" secondAttribute="leading" id="nE0-gU-UwY"/>
-                            <constraint firstItem="ftW-xx-T4s" firstAttribute="top" secondItem="Wia-TW-TbR" secondAttribute="bottom" constant="106" id="rcB-D4-OV1"/>
+                            <constraint firstItem="ftW-xx-T4s" firstAttribute="top" secondItem="Wia-TW-TbR" secondAttribute="bottom" constant="106" id="rcB-D4-OV1">
+                                <variation key="heightClass=regular-widthClass=compact" constant="67"/>
+                            </constraint>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -252,15 +258,6 @@
                                     <constraint firstAttribute="width" constant="266" id="zET-Pe-5fG"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I love this" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.30000000000000004" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c2h-TG-mDj">
-                                <rect key="frame" x="16" y="158" width="568" height="80"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="54b-T7-VWS"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fNt-Xr-0mZ">
                                 <rect key="frame" x="562" y="517" width="22" height="22"/>
                                 <state key="normal">
@@ -285,22 +282,43 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I love this" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.30000000000000004" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c2h-TG-mDj">
+                                <rect key="frame" x="16" y="158" width="568" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="54b-T7-VWS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="c2h-TG-mDj" firstAttribute="top" secondItem="PVr-n9-pr4" secondAttribute="bottom" constant="8" symbolic="YES" id="2bZ-os-8X0"/>
-                            <constraint firstItem="SyB-PL-Jun" firstAttribute="top" secondItem="c2h-TG-mDj" secondAttribute="bottom" constant="13" id="B1B-ke-FJ4"/>
+                            <constraint firstItem="c2h-TG-mDj" firstAttribute="top" secondItem="PVr-n9-pr4" secondAttribute="bottom" constant="8" symbolic="YES" id="2bZ-os-8X0">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-21"/>
+                            </constraint>
+                            <constraint firstItem="SyB-PL-Jun" firstAttribute="top" secondItem="c2h-TG-mDj" secondAttribute="bottom" constant="13" id="B1B-ke-FJ4">
+                                <variation key="heightClass=regular-widthClass=compact" constant="74"/>
+                            </constraint>
                             <constraint firstItem="LTT-Df-sDj" firstAttribute="leading" secondItem="c2h-TG-mDj" secondAttribute="leading" id="BAD-OJ-ELt"/>
-                            <constraint firstItem="PVr-n9-pr4" firstAttribute="centerX" secondItem="c2h-TG-mDj" secondAttribute="centerX" id="LBS-gF-zDS"/>
-                            <constraint firstItem="PVr-n9-pr4" firstAttribute="leading" secondItem="bNF-AQ-XR3" secondAttribute="leadingMargin" constant="-3" id="O8Z-ku-t7i"/>
+                            <constraint firstItem="PVr-n9-pr4" firstAttribute="centerX" secondItem="c2h-TG-mDj" secondAttribute="centerX" id="LBS-gF-zDS">
+                                <variation key="heightClass=regular-widthClass=compact" constant="3"/>
+                            </constraint>
+                            <constraint firstItem="PVr-n9-pr4" firstAttribute="leading" secondItem="bNF-AQ-XR3" secondAttribute="leadingMargin" constant="-3" id="O8Z-ku-t7i">
+                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                            </constraint>
                             <constraint firstItem="K51-JR-1Ir" firstAttribute="top" secondItem="SyB-PL-Jun" secondAttribute="bottom" constant="130" id="Uoz-fi-IF6"/>
                             <constraint firstItem="K51-JR-1Ir" firstAttribute="top" secondItem="fNt-Xr-0mZ" secondAttribute="bottom" constant="17" id="byM-9Y-58v"/>
-                            <constraint firstItem="PVr-n9-pr4" firstAttribute="top" secondItem="xGi-Rn-ZF3" secondAttribute="bottom" constant="40" id="eD9-uu-Ev0"/>
+                            <constraint firstItem="PVr-n9-pr4" firstAttribute="top" secondItem="xGi-Rn-ZF3" secondAttribute="bottom" constant="40" id="eD9-uu-Ev0">
+                                <variation key="heightClass=regular-widthClass=compact" constant="8"/>
+                            </constraint>
                             <constraint firstItem="LTT-Df-sDj" firstAttribute="top" secondItem="fNt-Xr-0mZ" secondAttribute="top" id="mQH-EB-T3c"/>
                             <constraint firstItem="c2h-TG-mDj" firstAttribute="leading" secondItem="bNF-AQ-XR3" secondAttribute="leadingMargin" id="of2-Jf-pOJ"/>
                             <constraint firstItem="fNt-Xr-0mZ" firstAttribute="trailing" secondItem="bNF-AQ-XR3" secondAttribute="trailingMargin" id="rfy-J9-tha"/>
                             <constraint firstItem="c2h-TG-mDj" firstAttribute="trailing" secondItem="bNF-AQ-XR3" secondAttribute="trailingMargin" id="sKm-LJ-qrc"/>
-                            <constraint firstItem="c2h-TG-mDj" firstAttribute="top" secondItem="xGi-Rn-ZF3" secondAttribute="bottom" constant="138" id="tbh-Cx-JDs"/>
+                            <constraint firstItem="c2h-TG-mDj" firstAttribute="top" secondItem="xGi-Rn-ZF3" secondAttribute="bottom" constant="138" id="tbh-Cx-JDs">
+                                <variation key="heightClass=regular-widthClass=compact" constant="77"/>
+                            </constraint>
                             <constraint firstItem="SyB-PL-Jun" firstAttribute="centerX" secondItem="c2h-TG-mDj" secondAttribute="centerX" id="xtk-BQ-NOr"/>
                         </constraints>
                     </view>
@@ -346,6 +364,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="sse-Xv-xc0"/>
-        <segue reference="zUL-37-MXm"/>
+        <segue reference="0R6-AH-cxc"/>
     </inferredMetricsTieBreakers>
 </document>
