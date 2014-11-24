@@ -88,10 +88,7 @@ class SweetAlert: UIViewController {
         subTitleTextView.textColor = UIColor.blackColor()
         subTitleTextView.editable = false
         
-        // Mark: Vibrancy Effects
-        var vibran = UIVibrancyEffect(forBlurEffect: UIBlurEffect(style: UIBlurEffectStyle.ExtraLight))
-        var vibranView = UIVisualEffectView(effect: vibran)
-        vibranView.contentView.addSubview(subTitleTextView)
+        
     }
     
     func resizeAndRelayout() {
@@ -99,6 +96,15 @@ class SweetAlert: UIViewController {
         var blur = UIBlurEffect(style: UIBlurEffectStyle.Light)
         var visual = UIVisualEffectView(effect: blur)
         visual.frame = contentView.bounds
+        var vibran = UIVibrancyEffect(forBlurEffect: blur)
+        var vibranView = UIVisualEffectView(effect: vibran)
+        
+        
+        vibranView.contentView.addSubview(subTitleTextView)
+        vibranView.contentView.addSubview(titleLabel)
+       // vibranView.contentView.addSubview(imageView!)
+        visual.contentView.addSubview(vibranView)
+        //visual.contentView.addSubview(contentView)
         contentView.addSubview(visual)
         
         var mainScreenBounds = UIScreen.mainScreen().bounds
