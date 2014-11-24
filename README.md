@@ -12,7 +12,7 @@ values through a wheel, or by picking a color from the default provided template
 <img src="Screenshots/shot1.png" alt="First Screen"> <img src="Screenshots/shot2.png" alt="Second Screen"> <img src="Screenshots/shot3.png" alt="Third Screen">
 <br>
 <img src="Screenshots/shot4.png" alt="First Screen"> <img src="Screenshots/shot5.png" alt="Second Screen"> <img src="Screenshots/shot6.png" alt="Third Screen"> <br>
-<img src="Screenshots/shot7.png" alt="First Screen"> <img src="Screenshots/shot8.png" alt="Second Screen"> <img src="Screenshots/shot9.png" alt="Third Screen"> <br>
+
 <img src="Screenshots/shot10.png" alt="First Screen"> <img src="Screenshots/shot11.png" alt="Second Screen"> <img src="Screenshots/shot12.png" alt="Third Screen">
 
 

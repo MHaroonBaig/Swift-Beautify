@@ -102,7 +102,7 @@ class SweetAlert: UIViewController {
         
         vibranView.contentView.addSubview(subTitleTextView)
         vibranView.contentView.addSubview(titleLabel)
-       // vibranView.contentView.addSubview(imageView!)
+       
         visual.contentView.addSubview(vibranView)
         //visual.contentView.addSubview(contentView)
         contentView.addSubview(visual)
