@@ -89,7 +89,9 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8TR-BM-FrI">
                                 <rect key="frame" x="16" y="157" width="568" height="58"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="58" id="Mgo-Dp-dbn"/>
+                                    <constraint firstAttribute="height" constant="58" id="Mgo-Dp-dbn">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="95"/>
+                                    </constraint>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="45"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -118,6 +120,7 @@
                             <constraint firstItem="LMi-7S-pHJ" firstAttribute="top" secondItem="LXK-l3-WdN" secondAttribute="bottom" constant="41" id="kiM-Ch-PtD"/>
                             <constraint firstItem="Doo-0h-aYe" firstAttribute="top" secondItem="8TR-BM-FrI" secondAttribute="bottom" constant="8" symbolic="YES" id="mrs-fo-eQJ">
                                 <variation key="heightClass=regular-widthClass=compact" constant="83"/>
+                                <variation key="heightClass=regular-widthClass=regular" constant="-29"/>
                             </constraint>
                             <constraint firstItem="Doo-0h-aYe" firstAttribute="leading" secondItem="8TR-BM-FrI" secondAttribute="leading" id="xjw-DX-8Eo"/>
                         </constraints>
@@ -161,7 +164,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1313" y="304"/>
+            <point key="canvasLocation" x="1312.5" y="303.75"/>
         </scene>
         <!--Font Families-->
         <scene sceneID="41W-RS-ZXa">
@@ -212,6 +215,7 @@
                             <constraint firstItem="q2x-vC-nh7" firstAttribute="leading" secondItem="6pc-jw-fsG" secondAttribute="leading" id="nE0-gU-UwY"/>
                             <constraint firstItem="ftW-xx-T4s" firstAttribute="top" secondItem="Wia-TW-TbR" secondAttribute="bottom" constant="106" id="rcB-D4-OV1">
                                 <variation key="heightClass=regular-widthClass=compact" constant="67"/>
+                                <variation key="heightClass=regular-widthClass=regular" constant="165"/>
                             </constraint>
                         </constraints>
                     </view>
@@ -238,7 +242,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xhA-lz-PFa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2037" y="304"/>
+            <point key="canvasLocation" x="2037" y="303.75"/>
         </scene>
         <!--Done View Controller-->
         <scene sceneID="h1F-Ew-x4j">
@@ -364,6 +368,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="sse-Xv-xc0"/>
-        <segue reference="0R6-AH-cxc"/>
+        <segue reference="zUL-37-MXm"/>
     </inferredMetricsTieBreakers>
 </document>
