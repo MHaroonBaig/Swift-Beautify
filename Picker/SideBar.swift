@@ -58,17 +58,17 @@ class SideBar: NSObject, SideBarTableViewControllerDelegate {
         
         originView.addSubview(sideBarContainerView)
         
-        let blurView:UIVisualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: UIBlurEffectStyle.Light))
+        let blurView:UIVisualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: UIBlurEffectStyle.Dark))
         blurView.frame = sideBarContainerView.bounds
         sideBarContainerView.addSubview(blurView)
         
         
         sideBarTableViewController.delegate = self
         sideBarTableViewController.tableView.frame = sideBarContainerView.bounds
-        sideBarTableViewController.tableView.clipsToBounds = false
+        sideBarTableViewController.tableView.clipsToBounds = true
         sideBarTableViewController.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
         sideBarTableViewController.tableView.backgroundColor = UIColor.clearColor()
-        sideBarTableViewController.tableView.scrollsToTop  = false
+        sideBarTableViewController.tableView.scrollsToTop  = true
         sideBarTableViewController.tableView.contentInset = UIEdgeInsetsMake(sideBarTableViewTopInset, 0, 0, 0)
         
         sideBarTableViewController.tableView.reloadData()
