@@ -53,8 +53,8 @@ class SweetAlert: UIViewController {
     }
     
     func setupContentView() {
-        //contentView.backgroundColor = UIColor(white: 1.0, alpha: 1.0)
         
+        //contentView.backgroundColor = UIColor(white: 1.0, alpha: 1.0)
         contentView.layer.cornerRadius = 5.0
         contentView.layer.masksToBounds = true
         contentView.layer.borderWidth = 0.5
