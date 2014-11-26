@@ -92,26 +92,25 @@ class SweetAlert: UIViewController {
     }
     
     func resizeAndRelayout() {
-        // Mark: Blur Effects
-        var blur = UIBlurEffect(style: UIBlurEffectStyle.Light)
-        var visual = UIVisualEffectView(effect: blur)
-        visual.frame = contentView.bounds
-        var vibran = UIVibrancyEffect(forBlurEffect: blur)
-        var vibranView = UIVisualEffectView(effect: vibran)
         
-        
-        vibranView.contentView.addSubview(subTitleTextView)
-        vibranView.contentView.addSubview(titleLabel)
-       
-        visual.contentView.addSubview(vibranView)
-        //visual.contentView.addSubview(contentView)
-        contentView.addSubview(visual)
         
         var mainScreenBounds = UIScreen.mainScreen().bounds
         self.view.frame.size = mainScreenBounds.size
         var x: CGFloat = kWidthMargin
         var y: CGFloat = KTopMargin
         var width: CGFloat = kContentWidth - (kWidthMargin*2)
+        
+        // Mark: Blur Effects
+        
+        var blur = UIBlurEffect(style: UIBlurEffectStyle.Light)
+        var visual = UIVisualEffectView(effect: blur)
+        visual.frame = contentView.bounds
+        var vibran = UIVibrancyEffect(forBlurEffect: blur)
+        var vibranView = UIVisualEffectView(effect: vibran)
+        vibranView.contentView.addSubview(subTitleTextView)
+        vibranView.contentView.addSubview(titleLabel)
+        visual.contentView.addSubview(vibranView)
+        contentView.addSubview(visual)
         
         if animatedView != nil {
             animatedView!.frame = CGRect(x: (kContentWidth - kAnimatedViewHeight) / 2.0, y: y, width: kAnimatedViewHeight, height: kAnimatedViewHeight)
@@ -120,10 +119,11 @@ class SweetAlert: UIViewController {
         }
         
         if imageView != nil {
-            imageView!.frame = CGRect(x: (kContentWidth - kAnimatedViewHeight) / 2.0, y: y, width: kAnimatedViewHeight, height: kAnimatedViewHeight)
+            imageView!.frame = CGRect(x: (kContentWidth - (kAnimatedViewHeight + 25.0)) / 2.0, y: y, width: kAnimatedViewHeight + 25.0, height: kAnimatedViewHeight + 25.0)
             contentView.addSubview(imageView!)
             y += imageView!.frame.size.height + kHeightMargin
         }
+        
         
         
         // Title
