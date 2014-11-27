@@ -327,7 +327,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="aDc-Sn-iwu">
-                        <barButtonItem key="rightBarButtonItem" title="Get your values" id="ymV-Q9-QlS">
+                        <barButtonItem key="rightBarButtonItem" title="Get your values" style="done" id="ymV-Q9-QlS">
                             <connections>
                                 <action selector="valuesRetrieval:" destination="CAb-TE-gOE" id="QfL-tY-DS3"/>
                             </connections>
