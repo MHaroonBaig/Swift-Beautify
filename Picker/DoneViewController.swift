@@ -131,7 +131,7 @@ class DoneViewController: UIViewController, UIAlertViewDelegate{
     
     func donateAction(sender: UIButton!){
         var customIcon = UIImage(named: "lightbulb")
-        var alertview = JSSAlertView().show(self, title: "Lovely", text: "We will start accepting your donations in the near future. This feature is currently unavailable", buttonText: "Ok", color: finalBackgroundColor, iconImage: customIcon)
+        var alertview = JSSAlertView().show(self, title: "Lovely", text: "We will start accepting your donations in the near future. This feature is currently unavailable.", buttonText: "Ok", color: finalBackgroundColor, iconImage: customIcon)
         alertview.setTextTheme(.Light)
     
     }
