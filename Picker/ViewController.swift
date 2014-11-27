@@ -55,7 +55,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet weak var mySwitch: UISwitch!
     @IBOutlet weak var myBgLabel: UILabel! // Background RGB Label
     
-    // -------- Data source ----------------------------------------------------------//
+    // MARK: - DataSource
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         // How many components are there in the picker view ?
@@ -69,7 +69,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             return getCount
     }
     
-    // -------- Delegates -------------------------------------------------------------//
+    // MARK: - Delegates
     
     func pickerView(pickerView: UIPickerView,
         titleForRow row: Int,
@@ -287,7 +287,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         

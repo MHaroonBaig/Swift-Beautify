@@ -106,7 +106,6 @@ class FontStylingsViewController: UIViewController, UIPickerViewDataSource, UIPi
             navigationToDoneView.finalBackgroundColor = backgroundColor2
             navigationToDoneView.finalLabelColor = labelBackgroundColor
             navigationToDoneView.finalLabelFont = UIFont(name: data[currentSelection], size: 45.0)
-            
         }
         
     }
