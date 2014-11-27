@@ -99,18 +99,20 @@ class DoneViewController: UIViewController, UIAlertViewDelegate{
         
         finalValueMessage = "\(backgroundString)\n\(labelString)\n\(fontName)\n\n*Color values are in RGB"
         myAddButton.tintColor = finalLabelColor
-
+        
         // MARK: - Donate Button
         
         var donateButton = MKButton(frame: CGRect(x: 10.0, y: 10.0, width: 180.0, height: 45.0))
         donateButton.setTranslatesAutoresizingMaskIntoConstraints(false)
         self.view.addSubview(donateButton)
+        
+        donateButton.addTarget(self, action: "donateAction:", forControlEvents: UIControlEvents.TouchUpInside)
         donateButton.backgroundColor = finalBackgroundColor
         donateButton.layer.shadowOpacity = 0.85
         donateButton.layer.shadowRadius = 14.5
         donateButton.layer.shadowColor = finalLabelColor.CGColor
         donateButton.layer.shadowOffset = CGSize(width: 0, height: 2.5)
-
+        
         donateButton.setTitle("Donate", forState: .Normal)
         donateButton.titleLabel?.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 22.0)
         var viewsDict = ["donateButton": donateButton]
@@ -125,6 +127,13 @@ class DoneViewController: UIViewController, UIAlertViewDelegate{
         donateButton.addConstraints(height)
         self.view.addConstraint(position_X)
         self.view.addConstraint(position_Y)
+    }
+    
+    func donateAction(sender: UIButton!){
+        var customIcon = UIImage(named: "lightbulb")
+        var alertview = JSSAlertView().show(self, title: "Lovely", text: "We will start accepting your donations in the near future. This feature is currently unavailable", buttonText: "Ok", color: finalBackgroundColor, iconImage: customIcon)
+        alertview.setTextTheme(.Light)
+    
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -148,8 +157,8 @@ class DoneViewController: UIViewController, UIAlertViewDelegate{
             self.mylabel.text = "Lorem Ipsum Dolor"
             self.mylabel.fadeIn()
         })
-
-  }
+        
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
