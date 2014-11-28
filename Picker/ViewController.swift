@@ -127,8 +127,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                     myPicker.backgroundColor =    pickerColor
                 }
             }
-            
     }
+    
     func sideBarDidSelectButtonAtIndex(index: Int) {
         
         switch (index){
@@ -248,7 +248,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         return finalConvertedColor
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         myPicker.delegate = self
@@ -261,7 +260,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         self.view.backgroundColor = backgroundColor
         
         // Populating the RGB values
-        
         var index = 0
         for i in 1...255{
             rgbValues[index].append(i)
@@ -270,12 +268,10 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             index = 0
         }
         
-        
         for i in 0...2{
             myPicker.selectRow(backupRgbValues[i], inComponent:i, animated: true)
             rgbBackground[i] = backupRgbValues[i]
         }
-        
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -309,4 +305,3 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
     
 }
-

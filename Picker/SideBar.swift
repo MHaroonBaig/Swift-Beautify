@@ -54,7 +54,7 @@ class SideBar: NSObject, SideBarTableViewControllerDelegate {
         
         sideBarContainerView.frame = CGRectMake(-barWidth - 1, originView.frame.origin.y, barWidth, originView.frame.size.height)
         sideBarContainerView.backgroundColor = UIColor.clearColor()
-        sideBarContainerView.clipsToBounds = true
+        sideBarContainerView.clipsToBounds = false
         
         originView.addSubview(sideBarContainerView)
         
@@ -65,7 +65,7 @@ class SideBar: NSObject, SideBarTableViewControllerDelegate {
         
         sideBarTableViewController.delegate = self
         sideBarTableViewController.tableView.frame = sideBarContainerView.bounds
-        sideBarTableViewController.tableView.clipsToBounds = true
+        sideBarTableViewController.tableView.clipsToBounds = false
         sideBarTableViewController.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
         sideBarTableViewController.tableView.backgroundColor = UIColor.clearColor()
         sideBarTableViewController.tableView.scrollsToTop  = true
