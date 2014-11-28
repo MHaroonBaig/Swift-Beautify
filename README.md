@@ -18,6 +18,7 @@ values through a wheel, or by picking a color from the default provided template
 - [x] Dynamic variations in the Font Family
 - [x] Variations in the Font Style
 - [x] Default templates through the side bar
+- [x] Material Design Components
 - [x] Final animated result at the end
 
 ---
