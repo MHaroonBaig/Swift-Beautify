@@ -108,6 +108,7 @@ class DoneViewController: UIViewController, UIAlertViewDelegate{
         
         donateButton.addTarget(self, action: "donateAction:", forControlEvents: UIControlEvents.TouchUpInside)
         donateButton.backgroundColor = finalBackgroundColor
+        donateButton.circleLayerColor = finalLabelColor
         donateButton.layer.shadowOpacity = 0.85
         donateButton.layer.shadowRadius = 14.5
         donateButton.layer.shadowColor = finalLabelColor.CGColor
