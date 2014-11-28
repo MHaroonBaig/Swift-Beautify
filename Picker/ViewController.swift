@@ -291,6 +291,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         if (segue.identifier == "doneView"){
+            sideBar.toggleSidebar(false)
             var navigationToDoneView = segue.destinationViewController as DoneViewController
             navigationToDoneView.finalBackgroundColor = backgroundColor
             navigationToDoneView.finalLabelColor = textColor

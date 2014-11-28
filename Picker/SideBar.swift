@@ -77,7 +77,6 @@ class SideBar: NSObject, SideBarTableViewControllerDelegate {
         
     }
     
-    
     func handleSwipe(recognizer:UISwipeGestureRecognizer){
         if recognizer.direction == UISwipeGestureRecognizerDirection.Left{
             showSideBar(false)
@@ -91,7 +90,7 @@ class SideBar: NSObject, SideBarTableViewControllerDelegate {
     }
     
     func toggleSidebar (value: Bool){
-    showSideBar(value)
+        showSideBar(value)
     }
     
     
