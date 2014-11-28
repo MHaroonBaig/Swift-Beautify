@@ -35,7 +35,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     @IBAction func switchStateChanged(sender: UISwitch) {
         if (sender.on){
-            
+            var customIcon = UIImage(named: "lightbulb")
+            var alertview = JSSAlertView().show(self, title: "Background Color Locked", text: "The color of the font will now be changed. Turn On the switch to lock the Font Color and head over to the background.", buttonText: "Ok thats cool", color: backgroundColor, iconImage: customIcon)
+            alertview.setTextTheme(.Dark)
             // The user is changing the color of the label
             for i in 0...2{
                 myPicker.selectRow(backupRgbValuesLabel[i], inComponent:i, animated: true)
