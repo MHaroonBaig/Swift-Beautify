@@ -115,7 +115,9 @@ class DoneViewController: UIViewController, UIAlertViewDelegate{
         donateButton.layer.shadowOffset = CGSize(width: 0, height: 2.5)
         
         donateButton.setTitle("Donate", forState: .Normal)
+        donateButton.setTitleColor(finalLabelColor, forState: .Normal)
         donateButton.titleLabel?.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 22.0)
+        
         var viewsDict = ["donateButton": donateButton]
         
         // MARK: - Constraints
@@ -133,7 +135,7 @@ class DoneViewController: UIViewController, UIAlertViewDelegate{
     func donateAction(sender: UIButton!){
         var customIcon = UIImage(named: "lightbulb")
         var alertview = JSSAlertView().show(self, title: "We're Obliged", text: "We will start accepting your donations in the near future. This feature is currently unavailable.", buttonText: "Ok", color: finalBackgroundColor, iconImage: customIcon)
-        alertview.setTextTheme(.Light)
+        alertview.setTextTheme(.Dark)
     
     }
     
