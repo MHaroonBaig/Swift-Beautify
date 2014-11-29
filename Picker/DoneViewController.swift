@@ -175,13 +175,14 @@ class DoneViewController: UIViewController, UIAlertViewDelegate{
     
     func imageTapped(sender: AnyObject){
         
-        UIView.animateWithDuration(1.5, animations: {
-            self.mySmilingImage.alpha = 0.3
+        UIView.animateWithDuration(0.5, animations: {
+            self.mySmilingImage.alpha = 0.2
         })
         
         let alert = SCLAlertView()
         let txt = alert.addTextField(title:"Enter your tweet here ...")
         alert.addButton("Tweet it") {
+            let myHashtag = "\n#Beautify"
             // println("Text value: \(txt.text)")
             let accountStore = ACAccountStore()
             let accountType = accountStore.accountTypeWithAccountTypeIdentifier(ACAccountTypeIdentifierTwitter)
@@ -195,7 +196,7 @@ class DoneViewController: UIViewController, UIAlertViewDelegate{
                     else {
                         let twitterAccount = twitterAccounts[0] as ACAccount
                         let swifter = Swifter(account: twitterAccount)
-                        swifter.postStatusUpdate(txt.text, inReplyToStatusID: nil, lat: nil, long: nil, placeID: nil, displayCoordinates: nil, trimUser: nil, success: {
+                        swifter.postStatusUpdate(txt.text + myHashtag, inReplyToStatusID: nil, lat: nil, long: nil, placeID: nil, displayCoordinates: nil, trimUser: nil, success: {
                             (status: [String : SwifteriOS.JSONValue]?) in
                             self.tweetSuccess = true
                             }, failure: {
