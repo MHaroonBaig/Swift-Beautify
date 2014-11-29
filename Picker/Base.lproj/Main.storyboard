@@ -256,7 +256,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.89999999999999991" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="finalImage" translatesAutoresizingMaskIntoConstraints="NO" id="SyB-PL-Jun">
+                            <imageView alpha="0.89999999999999991" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="finalImage" translatesAutoresizingMaskIntoConstraints="NO" id="SyB-PL-Jun">
                                 <rect key="frame" x="167" y="251" width="266" height="175"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="266" id="zET-Pe-5fG"/>
@@ -337,6 +337,7 @@
                         <outlet property="aboutButton" destination="fNt-Xr-0mZ" id="M5U-Ts-O0I"/>
                         <outlet property="myAddButton" destination="LTT-Df-sDj" id="3h9-CB-z3n"/>
                         <outlet property="myNameLabel" destination="PVr-n9-pr4" id="9Y3-Ym-mcb"/>
+                        <outlet property="mySmilingImage" destination="SyB-PL-Jun" id="FQv-yS-Bb7"/>
                         <outlet property="mylabel" destination="c2h-TG-mDj" id="clM-N2-eho"/>
                     </connections>
                 </viewController>

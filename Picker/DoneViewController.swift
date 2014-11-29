@@ -36,6 +36,7 @@ class DoneViewController: UIViewController, UIAlertViewDelegate{
     @IBOutlet weak var myAddButton: UIButton!
     @IBOutlet weak var myNameLabel: UILabel!
     @IBOutlet weak var mylabel: UILabel!
+    @IBOutlet weak var mySmilingImage: UIImageView!
     
     @IBAction func addName(sender: AnyObject) {
         var alert: UIAlertView!
@@ -136,12 +137,18 @@ class DoneViewController: UIViewController, UIAlertViewDelegate{
         var customIcon = UIImage(named: "lightbulb")
         var alertview = JSSAlertView().show(self, title: "We're Obliged", text: "We will start accepting your donations in the near future", buttonText: "Ok", color: finalBackgroundColor, iconImage: customIcon)
         alertview.setTextTheme(.Dark)
-    
+        
     }
     
     override func viewDidAppear(animated: Bool) {
         
         super.viewDidAppear(animated)
+        
+        let tapGestureRecogniser = UITapGestureRecognizer(target: self, action: "imageTapped:")
+        tapGestureRecogniser.numberOfTapsRequired = 1
+        tapGestureRecogniser.numberOfTouchesRequired = 1
+        mySmilingImage.addGestureRecognizer(tapGestureRecogniser)
+        
         let getDefault = NSUserDefaults()
         let name = getDefault.objectForKey("name") as NSString!
         
@@ -161,6 +168,11 @@ class DoneViewController: UIViewController, UIAlertViewDelegate{
             self.mylabel.fadeIn()
         })
         
+    }
+   
+    func imageTapped(sender: AnyObject){
+    SweetAlert().showAlert("Image Tapped")
+    
     }
     
     override func didReceiveMemoryWarning() {
