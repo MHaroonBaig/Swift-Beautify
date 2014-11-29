@@ -10,6 +10,8 @@
 	<string>Picker</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>72E8AEF8201D0465EAD5BE5475E77330EA7EC0CD</key>
+		<string>https://github.com/mattdonnelly/Swifter.git</string>
 		<key>B52285F9BC48DE7A090FE27DF248804B68A30D02</key>
 		<string>https://github.com/MHaroonBaig/Beautify.git</string>
 	</dict>
@@ -17,6 +19,8 @@
 	<string>Picker.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>72E8AEF8201D0465EAD5BE5475E77330EA7EC0CD</key>
+		<string>../../../../../../../Swift%20Git/Swifter/Swifter</string>
 		<key>B52285F9BC48DE7A090FE27DF248804B68A30D02</key>
 		<string>../..</string>
 	</dict>
@@ -35,6 +39,14 @@
 			<string>B52285F9BC48DE7A090FE27DF248804B68A30D02</string>
 			<key>IDESourceControlWCCName</key>
 			<string>Picker</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>72E8AEF8201D0465EAD5BE5475E77330EA7EC0CD</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Swifter</string>
 		</dict>
 	</array>
 </dict>

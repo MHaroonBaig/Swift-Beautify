@@ -7,7 +7,9 @@
 //
 
 import UIKit
-
+import Accounts
+import Social
+import SwifteriOS
 
 
 extension UIView {
@@ -169,10 +171,42 @@ class DoneViewController: UIViewController, UIAlertViewDelegate{
         })
         
     }
-   
-    func imageTapped(sender: AnyObject){
-    SweetAlert().showAlert("Image Tapped")
     
+    func imageTapped(sender: AnyObject){
+        let accountStore = ACAccountStore()
+        let accountType = accountStore.accountTypeWithAccountTypeIdentifier(ACAccountTypeIdentifierTwitter)
+        accountStore.requestAccessToAccountsWithType(accountType, options: nil){
+            granted, error in
+            if granted {
+                let twitterAccounts = accountStore.accountsWithAccountType(accountType)
+                if twitterAccounts?.count == 0 {
+                    SweetAlert().showAlert("No configured twitter accounts")
+                }
+                else {
+                    
+                    let twitterAccount = twitterAccounts[0] as ACAccount
+                    let swifter = Swifter(account: twitterAccount)
+                    swifter.postStatusUpdate("Swifter, a twitter framework is amazing!", inReplyToStatusID: nil, lat: nil, long: nil, placeID: nil, displayCoordinates: nil, trimUser: nil, success: {
+                        (status: Dictionary<String, JSONValue>?) in
+                        
+                        // ...
+                        
+                        }, failure: {
+                            (error: NSError) in
+                            
+                            // ...
+                            
+                    })
+                }
+                
+                
+            }
+            
+            
+            
+        }
+        
+        
     }
     
     override func didReceiveMemoryWarning() {
