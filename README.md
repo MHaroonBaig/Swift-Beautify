@@ -19,6 +19,7 @@ values through a wheel, or by picking a color from the default provided template
 - [x] Variations in the Font Style
 - [x] Default templates through the side bar
 - [x] Material Design Components
+- [x] Twitter integration
 - [x] Final animated result at the end
 
 ---

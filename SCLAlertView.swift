@@ -342,7 +342,7 @@ class SCLAlertView: UIViewController {
         }
 		
 		// Done button
-		let txt = completeText != nil ? completeText! : "Maybe some other time"
+		let txt = completeText != nil ? completeText! : "Maybe next time"
 		addButton(txt, target:self, selector:Selector("hideView"))
 		
         // Alert view colour and images
