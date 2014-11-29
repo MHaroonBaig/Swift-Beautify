@@ -180,7 +180,8 @@ class DoneViewController: UIViewController, UIAlertViewDelegate{
         })
         
         let alert = SCLAlertView()
-        let txt = alert.addTextField(title:"Enter your tweet here ...")
+        let txt = alert.addTextField(title:"Enter a beautiful tweet here ...")
+       
         alert.addButton("Tweet it") {
             let myHashtag = "\n#Beautify"
             // println("Text value: \(txt.text)")
@@ -209,12 +210,9 @@ class DoneViewController: UIViewController, UIAlertViewDelegate{
         }
         alert.showEdit("Tweet It", subTitle:"Spread the word if you like this app")
         
-        
-        
-        UIView.animateWithDuration(1.3, animations: {
+        UIView.animateWithDuration(1.5, animations: {
             self.mySmilingImage.alpha = 0.9
         })
-        
     }
     
     override func didReceiveMemoryWarning() {
