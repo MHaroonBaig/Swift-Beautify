@@ -2,7 +2,7 @@
 
 An iOS app written entirely in Swift, which let users design their own interface. 
 So basically, what this app does is that it lets a user play with different color combinations by dynamically modifying RGB
-values through a wheel, or by picking a color from the default provided templates which has all the Flat colors you want. User can change the color and style of the text too, by triggering the switch to lock the background. You can choose a variety of fonts provided by iOS8, all at one place. :yum:
+values through a wheel, or by picking a color from the default provided templates which has all the Flat colors you want. User can change the color and style of the text too, by triggering the switch to lock the background. You can choose a variety of fonts provided by iOS8, all at one place :blush:
 
 <p align="center">
 <img src="Screenshots/screencast.gif" alt="Demo">
@@ -23,4 +23,4 @@ values through a wheel, or by picking a color from the default provided template
 - [x] Final animated result at the end
 
 ---
-Compiled on Xcode 6.2(beta), works fine on the 6.1 too (without the new unwrapping rules introduced in 6.2). Optimised both for iPhones and iPads running iOS 7 or later :yum:
+Compiled on Xcode 6.2(beta), works fine on the 6.1 too (without the new unwrapping rules introduced in 6.2). Optimised both for iPhones and iPads running iOS 7 or later :trophy:
