@@ -44,33 +44,33 @@
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>05630D693F59F7CEDACB6CAB0E4EA0A642C60427</key>
-		<string>../../../../../../../Swift%20Git/Sweet%20Alert/SweetAlert-iOS</string>
+		<string>../../../Swift%20Git/Sweet%20Alert/SweetAlert-iOS</string>
 		<key>39C24F858ED829FAA0D85AAAF44281FF64B670AC</key>
-		<string>../../../../../../../Swift%20Git/MaterialKit/MaterialKit/MaterialKit</string>
+		<string>../../../Swift%20Git/MaterialKit/MaterialKit/MaterialKit</string>
 		<key>55E6E869000EE38E401F2EF561C870B5609886BC</key>
-		<string>../../../../../../../Swift%20Git/Frameless%20Browser/Frameless</string>
+		<string>../../../Swift%20Git/Frameless%20Browser/Frameless</string>
 		<key>60E3DCC96CD3B58F357889B0CCB5138313D88606</key>
-		<string>../../../../../../../Swift%20Git/FlipBook/Flipbook</string>
+		<string>../../../Swift%20Git/FlipBook/Flipbook</string>
 		<key>6AAAD9414F17A8B79D1864E55070BF5F9396B4CD</key>
-		<string>../../../../../../../Swift%20Git/SCL%20Alert%20View/SCLAlertView-Swift</string>
+		<string>../../../Swift%20Git/SCL%20Alert%20View/SCLAlertView-Swift</string>
 		<key>6CD21E61BF36BC59938931F68888351E08F0FA34</key>
-		<string>../../../../../../../Swift%20Git/JSAlertView/JSSAlertView</string>
+		<string>../../../Swift%20Git/JSAlertView/JSSAlertView</string>
 		<key>72E8AEF8201D0465EAD5BE5475E77330EA7EC0CD</key>
-		<string>../../../../../../../Swift%20Git/Swifter/Swifter</string>
+		<string>../../../Swift%20Git/Swifter/Swifter</string>
 		<key>7FB8AA1C27A7B27164E90631A17A6ADE04A15627</key>
-		<string>../../../../../../../Swift%20Git/Animated%20TabBar/animated-tab-bar</string>
+		<string>../../../Swift%20Git/Animated%20TabBar/animated-tab-bar</string>
 		<key>9DD84A14490C7232C05D5DFBA38001794CC46892</key>
-		<string>../../../../../../../Swift%20Git/Frosted%20SideBar/FrostedSidebar</string>
+		<string>../../../Swift%20Git/Frosted%20SideBar/FrostedSidebar</string>
 		<key>A8A43306CF193E23A985031E340F84E11D0B8A97</key>
-		<string>../../../../../../../Swift%20Git/Chats/Chats</string>
+		<string>../../../Swift%20Git/Chats/Chats</string>
 		<key>B52285F9BC48DE7A090FE27DF248804B68A30D02</key>
 		<string>../..</string>
 		<key>D256575CFF167EE4510B644FB2F3602FDD05F90B</key>
-		<string>../../../../../../../Swift%20Git/Morphing%20Label/LTMorphingLabel</string>
+		<string>../../../Swift%20Git/Morphing%20Label/LTMorphingLabel</string>
 		<key>E8C66EC217C297A7226D37518B8951104F2BAB40</key>
-		<string>../../../../../../../Swift%20Git/Blurred/UIVisualEffects</string>
+		<string>../../../Swift%20Git/Blurred/UIVisualEffects</string>
 		<key>EE2057E71FD3A43E9B6B845DAFFCE69B45809B07</key>
-		<string>../../../../../../../Swift%20Git/Hamburger/hamburger-button</string>
+		<string>../../../Swift%20Git/Hamburger/hamburger-button</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/MHaroonBaig/Beautify.git</string>

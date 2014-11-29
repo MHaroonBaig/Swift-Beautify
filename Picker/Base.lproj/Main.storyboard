@@ -68,6 +68,7 @@
                             </pickerView>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3aI-Ot-jrf">
                                 <rect key="frame" x="276" y="399" width="51" height="31"/>
+                                <color key="onTintColor" red="1" green="0.37906775949999999" blue="0.32852594559999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="switchStateChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="fU8-fl-j1G"/>
                                 </connections>
@@ -368,7 +369,7 @@
         <image name="finalImage" width="2400" height="2400"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="0R6-AH-cxc"/>
         <segue reference="sse-Xv-xc0"/>
+        <segue reference="zUL-37-MXm"/>
     </inferredMetricsTieBreakers>
 </document>
