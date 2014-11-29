@@ -33,6 +33,7 @@ class DoneViewController: UIViewController, UIAlertViewDelegate{
     var finalLabelFont: UIFont!
     var finalValueMessage: String!
     //var donateButton: MKButton!
+    var tweetSuccess: Bool!
     
     
     @IBOutlet weak var myAddButton: UIButton!
@@ -173,39 +174,45 @@ class DoneViewController: UIViewController, UIAlertViewDelegate{
     }
     
     func imageTapped(sender: AnyObject){
-        let accountStore = ACAccountStore()
-        let accountType = accountStore.accountTypeWithAccountTypeIdentifier(ACAccountTypeIdentifierTwitter)
-        accountStore.requestAccessToAccountsWithType(accountType, options: nil){
-            granted, error in
-            if granted {
-                let twitterAccounts = accountStore.accountsWithAccountType(accountType)
-                if twitterAccounts?.count == 0 {
-                    SweetAlert().showAlert("No configured twitter accounts")
-                }
-                else {
-                    
-                    let twitterAccount = twitterAccounts[0] as ACAccount
-                    let swifter = Swifter(account: twitterAccount)
-                    swifter.postStatusUpdate("Swifter, a twitter framework is amazing!", inReplyToStatusID: nil, lat: nil, long: nil, placeID: nil, displayCoordinates: nil, trimUser: nil, success: {
-                        (status: Dictionary<String, JSONValue>?) in
-                        
-                        // ...
-                        
-                        }, failure: {
-                            (error: NSError) in
-                            
-                            // ...
-                            
-                    })
-                }
-                
-                
-            }
-            
-            
-            
-        }
         
+        UIView.animateWithDuration(1.5, animations: {
+            self.mySmilingImage.alpha = 0.3
+        })
+        
+        let alert = SCLAlertView()
+        let txt = alert.addTextField(title:"Enter your tweet here ...")
+        alert.addButton("Tweet it") {
+            // println("Text value: \(txt.text)")
+            let accountStore = ACAccountStore()
+            let accountType = accountStore.accountTypeWithAccountTypeIdentifier(ACAccountTypeIdentifierTwitter)
+            accountStore.requestAccessToAccountsWithType(accountType, options: nil){
+                granted, error in
+                if granted {
+                    let twitterAccounts = accountStore.accountsWithAccountType(accountType)
+                    if twitterAccounts?.count == 0 {
+                        SweetAlert().showAlert("No configured twitter accounts")
+                    }
+                    else {
+                        let twitterAccount = twitterAccounts[0] as ACAccount
+                        let swifter = Swifter(account: twitterAccount)
+                        swifter.postStatusUpdate(txt.text, inReplyToStatusID: nil, lat: nil, long: nil, placeID: nil, displayCoordinates: nil, trimUser: nil, success: {
+                            (status: [String : SwifteriOS.JSONValue]?) in
+                            self.tweetSuccess = true
+                            }, failure: {
+                                (error: NSError) in
+                                self.tweetSuccess = false
+                        })
+                    }
+                }
+            }
+        }
+        alert.showEdit("Tweet It", subTitle:"Spread the word if you like this app")
+        
+        
+        
+        UIView.animateWithDuration(1.3, animations: {
+            self.mySmilingImage.alpha = 0.9
+        })
         
     }
     

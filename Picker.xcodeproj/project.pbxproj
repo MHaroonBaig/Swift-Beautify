@@ -13,6 +13,7 @@
 		751EE5931A29DE1700C0604F /* SwifteriOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 751EE58C1A29DDD500C0604F /* SwifteriOS.framework */; };
 		751EE5941A29DE3B00C0604F /* SwifteriOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 751EE58C1A29DDD500C0604F /* SwifteriOS.framework */; };
 		751EE5951A29DE3B00C0604F /* SwifteriOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 751EE58C1A29DDD500C0604F /* SwifteriOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		751EE59C1A29EF9800C0604F /* SCLAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751EE59B1A29EF9800C0604F /* SCLAlertView.swift */; };
 		754AE04B1A2796D1006E2F9C /* MKButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754AE0481A2796D1006E2F9C /* MKButton.swift */; };
 		754AE04C1A2796D1006E2F9C /* MKColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754AE0491A2796D1006E2F9C /* MKColor.swift */; };
 		754AE04D1A2796D1006E2F9C /* MKLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754AE04A1A2796D1006E2F9C /* MKLayer.swift */; };
@@ -97,6 +98,7 @@
 		7500F66E1A168067009DA3F4 /* SweetAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SweetAlert.swift; sourceTree = "<group>"; };
 		75163B911A1533300052E7E6 /* FontStylingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontStylingsViewController.swift; sourceTree = "<group>"; };
 		751EE5811A29DDD400C0604F /* Swifter.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Swifter.xcodeproj; path = "../../../../../Swift Git/Swifter/Swifter/Swifter.xcodeproj"; sourceTree = "<group>"; };
+		751EE59B1A29EF9800C0604F /* SCLAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCLAlertView.swift; path = ../SCLAlertView.swift; sourceTree = "<group>"; };
 		754AE0481A2796D1006E2F9C /* MKButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKButton.swift; sourceTree = "<group>"; };
 		754AE0491A2796D1006E2F9C /* MKColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKColor.swift; sourceTree = "<group>"; };
 		754AE04A1A2796D1006E2F9C /* MKLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKLayer.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 		7596755C1A09022800406914 /* Picker */ = {
 			isa = PBXGroup;
 			children = (
+				751EE59B1A29EF9800C0604F /* SCLAlertView.swift */,
 				7596755F1A09022800406914 /* AppDelegate.swift */,
 				759675611A09022800406914 /* ViewController.swift */,
 				759675631A09022800406914 /* Main.storyboard */,
@@ -367,6 +370,7 @@
 				759675601A09022800406914 /* AppDelegate.swift in Sources */,
 				754AE04B1A2796D1006E2F9C /* MKButton.swift in Sources */,
 				75BE67601A176689004ACE6E /* SideBar.swift in Sources */,
+				751EE59C1A29EF9800C0604F /* SCLAlertView.swift in Sources */,
 				75163B921A1533300052E7E6 /* FontStylingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
