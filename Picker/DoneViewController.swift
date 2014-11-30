@@ -252,7 +252,7 @@ class DoneViewController: UIViewController, UIAlertViewDelegate{
     
     func addShadow(Anyview: UIView!) {
         Anyview.layer.shadowColor = finalLabelColor.CGColor
-        Anyview.layer.shadowOpacity = 1.0
+        Anyview.layer.shadowOpacity = 0.9
         Anyview.layer.shadowOffset = CGSize(width: 1.0, height: 0.0)
     }
     
