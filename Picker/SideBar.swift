@@ -72,17 +72,22 @@ class SideBar: NSObject, SideBarTableViewControllerDelegate {
         sideBarTableViewController.tableView.contentInset = UIEdgeInsetsMake(sideBarTableViewTopInset, 0, 0, 0)
         
         sideBarTableViewController.tableView.reloadData()
-        
         sideBarContainerView.addSubview(sideBarTableViewController.tableView)
         
-        //MARK: - added shadows
-        sideBarContainerView.layer.shadowColor = UIColor.blackColor().CGColor
-        sideBarContainerView.layer.shadowOpacity = 1.0
-        sideBarContainerView.layer.shadowOffset = CGSize(width: 1.5, height: -2)
-        let beizerPath = UIBezierPath(rect: sideBarContainerView.layer.bounds)
-        sideBarContainerView.layer.shadowPath = beizerPath.CGPath
+        // MARK: - added shadows
+        addShadow(sideBarContainerView)
         
-   }
+       
+        
+    }
+    
+    func addShadow(anyView: UIView){
+        anyView.layer.shadowColor = UIColor.blackColor().CGColor
+        anyView.layer.shadowOpacity = 1.0
+        anyView.layer.shadowOffset = CGSize(width: 1.5, height: -2)
+        let beizerPath = UIBezierPath(rect: sideBarContainerView.layer.bounds)
+        anyView.layer.shadowPath = beizerPath.CGPath
+    }
     
     func handleSwipe(recognizer:UISwipeGestureRecognizer){
         if recognizer.direction == UISwipeGestureRecognizerDirection.Left{
@@ -119,7 +124,7 @@ class SideBar: NSObject, SideBarTableViewControllerDelegate {
         pushBehavior.magnitude = magnitude
         animator.addBehavior(pushBehavior)
         
-       let sideBarBehavior:UIDynamicItemBehavior = UIDynamicItemBehavior(items: [sideBarContainerView])
+        let sideBarBehavior:UIDynamicItemBehavior = UIDynamicItemBehavior(items: [sideBarContainerView])
         sideBarBehavior.elasticity = 0.3
         animator.addBehavior(sideBarBehavior)
         
@@ -128,5 +133,5 @@ class SideBar: NSObject, SideBarTableViewControllerDelegate {
     func sideBarControlDidSelectRow(indexPath: NSIndexPath) {
         delegate?.sideBarDidSelectButtonAtIndex(indexPath.row)
     }
-
+    
 }
