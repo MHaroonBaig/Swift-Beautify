@@ -21,6 +21,7 @@ values through a wheel, or by picking a color from the default provided template
 - [x] Material Design Components
 - [x] Twitter integration
 - [x] Final animated result at the end
+- [x] Accepting donations via BitCoins
 
 ---
 Compiled on Xcode 6.2(beta), works fine on the 6.1 too (without the new unwrapping rules introduced in 6.2). Optimised both for iPhones and iPads running iOS 7 or later :trophy:
