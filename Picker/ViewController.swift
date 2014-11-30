@@ -36,16 +36,13 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBAction func switchStateChanged(sender: UISwitch) {
         
         if (sender.on){
-            var customIcon = UIImage(named: "lightbulb")
-            var alertview = JSSAlertView().show(self, title: "Background Locked", text: "Font operations now enabled", buttonText: "Ok thats cool", color: backgroundColor, iconImage: customIcon)
-            alertview.setTextTheme(.Dark)
-            
             // The user is changing the color of the label
+            showAlert()
             for i in 0...2{
                 myPicker.selectRow(backupRgbValuesLabel[i], inComponent:i, animated: true)
                 rgbBackground[i] = backupRgbValuesLabel[i] //So that the color starts changing from the previously selected color after the user switches
             }
-        
+            
         } else {
             switchTrigger = false
             // The user is going to change the color of the Background
@@ -255,6 +252,37 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         super.viewDidLoad()
         myPicker.delegate = self
         myPicker.dataSource = self
+        prepareInterfaceAndPopulateSourceForPicker()
+        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        sideBar = SideBar(sourceView: self.view, menuItems: ["Turquoise", "Greensea", "Emerland", "Nephritis", "Peterriver", "Belizehole", "Amethyst", "Wisteria", "Wetasphalt", "Midnightblue", "Sunflower", "Orange", "Carrot", "Pumpkin", "Alizarin", "Pomegranate", "Clouds", "Silver", "Concrete", "Asbestos", "Wistful", "Snuff"])
+        sideBar.delegate = self
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if (segue.identifier == "doneView"){
+            sideBar.toggleSidebar(false)
+            var navigationToDoneView = segue.destinationViewController as DoneViewController
+            navigationToDoneView.finalBackgroundColor = backgroundColor
+            navigationToDoneView.finalLabelColor = textColor
+            navigationToDoneView.finalLabelFont = fontFamily
+        }
+        else {
+            var navigationObject: FontStylingsViewController = segue.destinationViewController as FontStylingsViewController
+            navigationObject.pickerBackground2 = pickerColor
+            navigationObject.labelBackgroundColor = textColor
+            navigationObject.backgroundColor2 = backgroundColor
+            navigationObject.backupRgbValues2 = backupRgbValues
+            navigationObject.backupRgbValuesLabel2 = backupRgbValuesLabel
+            navigationObject.currentSelection = currentSelection2
+        }
+    }
+    
+    func prepareInterfaceAndPopulateSourceForPicker() {
         myLabel.font = fontFamily
         myLabel.textColor = textColor
         myLabelRgb.textColor = textColor
@@ -277,33 +305,10 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         }
     }
     
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-        sideBar = SideBar(sourceView: self.view, menuItems: ["Turquoise", "Greensea", "Emerland", "Nephritis", "Peterriver", "Belizehole", "Amethyst", "Wisteria", "Wetasphalt", "Midnightblue", "Sunflower", "Orange", "Carrot", "Pumpkin", "Alizarin", "Pomegranate", "Clouds", "Silver", "Concrete", "Asbestos", "Wistful", "Snuff"])
-        sideBar.delegate = self
+    func showAlert() {
+        var customIcon = UIImage(named: "lightbulb")
+        var alertview = JSSAlertView().show(self, title: "Background Locked", text: "Font operations now enabled", buttonText: "Ok thats cool", color: backgroundColor, iconImage: customIcon)
+        alertview.setTextTheme(.Dark)
         
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
-        if (segue.identifier == "doneView"){
-            sideBar.toggleSidebar(false)
-            var navigationToDoneView = segue.destinationViewController as DoneViewController
-            navigationToDoneView.finalBackgroundColor = backgroundColor
-            navigationToDoneView.finalLabelColor = textColor
-            navigationToDoneView.finalLabelFont = fontFamily
-        }
-        else {
-            var navigationObject: FontStylingsViewController = segue.destinationViewController as FontStylingsViewController
-            navigationObject.pickerBackground2 = pickerColor
-            navigationObject.labelBackgroundColor = textColor
-            navigationObject.backgroundColor2 = backgroundColor
-            navigationObject.backupRgbValues2 = backupRgbValues
-            navigationObject.backupRgbValuesLabel2 = backupRgbValuesLabel
-            navigationObject.currentSelection = currentSelection2
-        }
     }
 }
