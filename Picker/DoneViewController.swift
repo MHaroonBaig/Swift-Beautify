@@ -32,7 +32,6 @@ class DoneViewController: UIViewController, UIAlertViewDelegate{
     var finalBackgroundColor: UIColor!
     var finalLabelFont: UIFont!
     var finalValueMessage: String!
-    //var donateButton: MKButton!
     var tweetSuccess: Bool!
     
     
@@ -60,10 +59,11 @@ class DoneViewController: UIViewController, UIAlertViewDelegate{
     }
     
     @IBOutlet weak var aboutButton: UIButton!
+    
     @IBAction func aboutView(sender: AnyObject) {
-        var aboutMe: String = "Hi folks. I'm haroon, a slash coder and a techie guy digging deep into various new tech-related stuff with great enthusiasm to try new gadgets. I usually spend a lot of time coding in Python and Swift, configuring Linux and exploring Django.\n\nEmail: haroon.prog@gmail.com\nTwitter: @PyBaig\n\nHappy coding"
-        SweetAlert().showAlert("Hi There!", subTitle: aboutMe, style: AlertStyle.CustomImag(imageFile: "myPic.png"), buttonTitle: "Got it", buttonColor: alertButtonColor, action: nil)
+        showAboutAlert()
     }
+    
     @IBAction func valuesRetrieval(sender: AnyObject) {
         
         var alert = SweetAlert()
@@ -184,7 +184,7 @@ class DoneViewController: UIViewController, UIAlertViewDelegate{
         
         let alert = SCLAlertView()
         let txt = alert.addTextField(title:"Enter a beautiful tweet here ...")
-       
+        
         alert.addButton("Tweet it") {
             let myHashtag = "\n#Beautify"
             // println("Text value: \(txt.text)")
@@ -220,5 +220,12 @@ class DoneViewController: UIViewController, UIAlertViewDelegate{
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    func showAboutAlert(){
+        
+        var aboutMe: String = "Hi folks. I'm haroon, a slash coder and a techie guy digging deep into various new tech-related stuff with great enthusiasm to try new gadgets. I usually spend a lot of time coding in Python and Swift, configuring Linux and exploring Django.\n\nEmail: haroon.prog@gmail.com\nTwitter: @PyBaig\n\nHappy coding"
+       
+        SweetAlert().showAlert("Hi There!", subTitle: aboutMe, style: AlertStyle.CustomImag(imageFile: "myPic.png"), buttonTitle: "Got it", buttonColor: alertButtonColor, action: nil)
     }
 }
