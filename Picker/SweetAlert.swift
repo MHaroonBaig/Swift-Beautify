@@ -100,8 +100,13 @@ class SweetAlert: UIViewController {
         var y: CGFloat = KTopMargin
         var width: CGFloat = kContentWidth - (kWidthMargin*2)
         
-        // Mark: Blur Effects
+        // MARK: - Shadowing
+        contentView.layer.shadowColor = UIColor.blackColor().CGColor
+        contentView.layer.shadowOpacity = 0.5
+        let beizerPath = UIBezierPath(rect: contentView.layer.bounds)
+        contentView.layer.shadowPath = beizerPath.CGPath
         
+        // Mark: Blur Effects
         var blur = UIBlurEffect(style: UIBlurEffectStyle.Light)
         var visual = UIVisualEffectView(effect: blur)
         visual.frame = contentView.bounds
@@ -111,6 +116,8 @@ class SweetAlert: UIViewController {
         vibranView.contentView.addSubview(titleLabel)
         visual.contentView.addSubview(vibranView)
         contentView.addSubview(visual)
+        
+
         
         if animatedView != nil {
             animatedView!.frame = CGRect(x: (kContentWidth - kAnimatedViewHeight) / 2.0, y: y, width: kAnimatedViewHeight, height: kAnimatedViewHeight)

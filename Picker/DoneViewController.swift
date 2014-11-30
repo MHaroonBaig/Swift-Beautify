@@ -70,6 +70,9 @@ class DoneViewController: UIViewController, UIAlertViewDelegate{
         super.viewDidLoad()
         prepareBackgroundAndSetValues()
         addDonateButtonWithConstraints()
+        addShadow(aboutButton)
+        addShadow(myAddButton)
+        
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -245,6 +248,12 @@ class DoneViewController: UIViewController, UIAlertViewDelegate{
                 })
             })
         }
+    }
+    
+    func addShadow(Anyview: UIView!) {
+        Anyview.layer.shadowColor = finalLabelColor.CGColor
+        Anyview.layer.shadowOpacity = 1.0
+        Anyview.layer.shadowOffset = CGSize(width: 1.0, height: 0.0)
     }
     
 }

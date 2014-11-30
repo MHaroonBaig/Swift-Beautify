@@ -75,6 +75,15 @@ class SideBar: NSObject, SideBarTableViewControllerDelegate {
         
         sideBarContainerView.addSubview(sideBarTableViewController.tableView)
         
+        //MARK: - added shadows
+        sideBarContainerView.layer.shadowColor = UIColor.blackColor().CGColor
+        sideBarContainerView.layer.shadowOpacity = 1.0
+        sideBarContainerView.layer.shadowOffset = CGSize(width: 1.5, height: -2)
+        let beizerPath = UIBezierPath(rect: sideBarContainerView.layer.bounds)
+        sideBarContainerView.layer.shadowPath = beizerPath.CGPath
+        
+    
+        
     }
     
     func handleSwipe(recognizer:UISwipeGestureRecognizer){
