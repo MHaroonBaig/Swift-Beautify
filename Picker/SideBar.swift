@@ -82,26 +82,22 @@ class SideBar: NSObject, SideBarTableViewControllerDelegate {
         let beizerPath = UIBezierPath(rect: sideBarContainerView.layer.bounds)
         sideBarContainerView.layer.shadowPath = beizerPath.CGPath
         
-    
-        
-    }
+   }
     
     func handleSwipe(recognizer:UISwipeGestureRecognizer){
         if recognizer.direction == UISwipeGestureRecognizerDirection.Left{
             showSideBar(false)
             delegate?.sideBarWillClose?()
             
-        }else{
+        } else{
             showSideBar(true)
             delegate?.sideBarWillOpen?()
         }
-        
     }
     
     func toggleSidebar (value: Bool){
         showSideBar(value)
     }
-    
     
     func showSideBar(shouldOpen:Bool){
         animator.removeAllBehaviors()
@@ -110,7 +106,6 @@ class SideBar: NSObject, SideBarTableViewControllerDelegate {
         let gravityX:CGFloat = (shouldOpen) ? 0.5 : -0.5
         let magnitude:CGFloat = (shouldOpen) ? 20 : -20
         let boundaryX:CGFloat = (shouldOpen) ? barWidth : -barWidth - 1
-        
         
         let gravityBehavior:UIGravityBehavior = UIGravityBehavior(items: [sideBarContainerView])
         gravityBehavior.gravityDirection = CGVectorMake(gravityX, 0)
@@ -124,39 +119,14 @@ class SideBar: NSObject, SideBarTableViewControllerDelegate {
         pushBehavior.magnitude = magnitude
         animator.addBehavior(pushBehavior)
         
-        
-        let sideBarBehavior:UIDynamicItemBehavior = UIDynamicItemBehavior(items: [sideBarContainerView])
+       let sideBarBehavior:UIDynamicItemBehavior = UIDynamicItemBehavior(items: [sideBarContainerView])
         sideBarBehavior.elasticity = 0.3
         animator.addBehavior(sideBarBehavior)
         
     }
     
-    
     func sideBarControlDidSelectRow(indexPath: NSIndexPath) {
         delegate?.sideBarDidSelectButtonAtIndex(indexPath.row)
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
 }
