@@ -49,7 +49,6 @@ class SideBar: NSObject, SideBarTableViewControllerDelegate {
         
     }
     
-    
     func setupSideBar(){
         
         sideBarContainerView.frame = CGRectMake(-barWidth - 1, originView.frame.origin.y, barWidth, originView.frame.size.height)
@@ -76,9 +75,6 @@ class SideBar: NSObject, SideBarTableViewControllerDelegate {
         
         // MARK: - added shadows
         addShadow(sideBarContainerView)
-        
-       
-        
     }
     
     func addShadow(anyView: UIView){
