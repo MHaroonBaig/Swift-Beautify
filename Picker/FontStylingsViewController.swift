@@ -54,18 +54,10 @@ class FontStylingsViewController: UIViewController, UIPickerViewDataSource, UIPi
     override func viewDidLoad() {
         super.viewDidLoad()
         populateFonts()
-        myPickerView2.backgroundColor = pickerBackground2
-        myHeadingLabel.textColor = labelBackgroundColor
-        self.view.backgroundColor = backgroundColor2
-        myHeadingLabel.font = UIFont(name: data[currentSelection], size: 45.0 )
-        myPickerView2.selectRow(currentSelection, inComponent: 0, animated: true)
+        prepareInterface()
         
     }
     
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "mainView"){
             var navigatingBack: ViewController = segue.destinationViewController as ViewController
@@ -85,11 +77,9 @@ class FontStylingsViewController: UIViewController, UIPickerViewDataSource, UIPi
             navigationToDoneView.finalLabelColor = labelBackgroundColor
             navigationToDoneView.finalLabelFont = UIFont(name: data[currentSelection], size: 45.0)
         }
-        
     }
     
     func populateFonts() {
-        
         var fontFamilies = UIFont.familyNames()
         var fontNames: [String] = []
         
@@ -99,7 +89,7 @@ class FontStylingsViewController: UIViewController, UIPickerViewDataSource, UIPi
                 fontNames.append(j as String)
             }
         }
-       
+        
         data = sorted (fontNames, {(s1: String, s2:String) -> Bool in return s1 < s2 })
         
         if currentSelection == nil{
@@ -110,5 +100,13 @@ class FontStylingsViewController: UIViewController, UIPickerViewDataSource, UIPi
                 }
             }
         }
+    }
+    
+    func prepareInterface() {
+        myPickerView2.backgroundColor = pickerBackground2
+        myHeadingLabel.textColor = labelBackgroundColor
+        self.view.backgroundColor = backgroundColor2
+        myHeadingLabel.font = UIFont(name: data[currentSelection], size: 45.0 )
+        myPickerView2.selectRow(currentSelection, inComponent: 0, animated: true)
     }
 }
