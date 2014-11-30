@@ -34,15 +34,18 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet weak var myLabelRgb: UILabel! // Text RGB value
     
     @IBAction func switchStateChanged(sender: UISwitch) {
+        
         if (sender.on){
             var customIcon = UIImage(named: "lightbulb")
             var alertview = JSSAlertView().show(self, title: "Background Locked", text: "Font operations now enabled", buttonText: "Ok thats cool", color: backgroundColor, iconImage: customIcon)
             alertview.setTextTheme(.Dark)
+            
             // The user is changing the color of the label
             for i in 0...2{
                 myPicker.selectRow(backupRgbValuesLabel[i], inComponent:i, animated: true)
                 rgbBackground[i] = backupRgbValuesLabel[i] //So that the color starts changing from the previously selected color after the user switches
             }
+        
         } else {
             switchTrigger = false
             // The user is going to change the color of the Background
@@ -58,7 +61,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet weak var myBgLabel: UILabel! // Background RGB Label
     
     // MARK: - DataSource
-    
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         // How many components are there in the picker view ?
         return rgbValues.count;
@@ -66,13 +68,12 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     func pickerView(pickerView: UIPickerView,
         numberOfRowsInComponent component: Int) -> Int {
-            // How many rows are there in each component.
+            // How many rows are there in each component
             var getCount = rgbValues[component].count
             return getCount
     }
     
     // MARK: - Delegates
-    
     func pickerView(pickerView: UIPickerView,
         titleForRow row: Int,
         forComponent component: Int) -> String! {
