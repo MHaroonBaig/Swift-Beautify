@@ -138,8 +138,11 @@ class DoneViewController: UIViewController, UIAlertViewDelegate{
     
     func donateAction(sender: UIButton!){
         var customIcon = UIImage(named: "lightbulb")
-        var alertview = JSSAlertView().show(self, title: "We're Obliged", text: "We will start accepting your donations in the near future", buttonText: "Ok", color: finalBackgroundColor, iconImage: customIcon)
-        alertview.setTextTheme(.Dark)
+        UIPasteboard.generalPasteboard().string = "1MoUCY3GTnbJ7xvbqwjUUi4Bxbv6CCFZUi"
+        var alertview = JSSAlertView()
+        alertview.heightConstant = 6.5
+        alertview.show(self, title: "We're Obliged", text: "BitCoin Wallet Address: 1MoUCY3GTnbJ7xvbqwjUUi4Bxbv6CCFZUi\n\nWe copied it for you so you can paste it anywhere.", buttonText: "Ok", color: finalBackgroundColor, iconImage: customIcon)
+        alertview.setTextTheme(.Light)
         
     }
     

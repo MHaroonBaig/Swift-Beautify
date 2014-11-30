@@ -24,12 +24,13 @@ class JSSAlertView: UIViewController {
     var iconImage:UIImage!
     var iconImageView:UIImageView!
     var closeAction:(()->Void)!
+    var heightConstant: CGFloat! = 2.0
     
     enum FontType {
         case Title, Text, Button
     }
-    var titleFont = "HelveticaNeue-Light"
-    var textFont = "HelveticaNeue"
+    var titleFont = "Noteworthy-Bold"
+    var textFont = "AppleSDGothicNeo-Bold"
     var buttonFont = "HelveticaNeue-Bold"
     
     var defaultColor = UIColorFromHex(0xF2F4F4, alpha: 1)
@@ -165,9 +166,10 @@ class JSSAlertView: UIViewController {
             let textString = textView.text! as NSString
             let textAttr = [NSFontAttributeName:textView.font]
             let textSize = CGSize(width: contentWidth, height: 90)
-            let textRect = textString.boundingRectWithSize(textSize, options: NSStringDrawingOptions.UsesLineFragmentOrigin, attributes: textAttr, context: nil)
-            self.textView.frame = CGRect(x: self.padding, y: yPos, width: self.alertWidth - (self.padding*2), height: ceil(textRect.size.height)*2)
-            yPos += ceil(textRect.size.height) + padding/2
+            let textRect = textString.boundingRectWithSize(textSize, options: NSStringDrawingOptions.TruncatesLastVisibleLine, attributes: textAttr, context: nil)
+            self.textView.frame = CGRect(x: self.padding, y: yPos, width: self.alertWidth - (self.padding*2), height: ceil(textRect.size.height) * heightConstant)
+            yPos += (ceil(textRect.size.height) * heightConstant) + padding/2
+            
         }
         
         // position the button
