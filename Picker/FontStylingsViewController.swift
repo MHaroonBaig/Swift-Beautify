@@ -12,8 +12,6 @@ class FontStylingsViewController: UIViewController, UIPickerViewDataSource, UIPi
     
     var data: [String]!
     var currentSelection:Int!
-    
-    
     var pickerBackground2:UIColor!
     var labelBackgroundColor: UIColor!
     var backgroundColor2: UIColor!
@@ -55,27 +53,7 @@ class FontStylingsViewController: UIViewController, UIPickerViewDataSource, UIPi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        var fontFamilies = UIFont.familyNames()
-        var fontNames: [String] = []
-        
-        for i in fontFamilies{
-            var fontNamesForFamilies = UIFont.fontNamesForFamilyName(i as String)
-            for j in fontNamesForFamilies{
-                fontNames.append(j as String)
-            }
-        }
-        
-        data = sorted (fontNames, {(s1: String, s2:String) -> Bool in return s1 < s2 })
-        
-        if currentSelection == nil{
-            for i in 0...(data.count) - 1 {
-                if data[i] == "AppleSDGothicNeo-Light"{
-                    currentSelection = i
-                    break
-                }
-            }
-        }
-        
+        populateFonts()
         myPickerView2.backgroundColor = pickerBackground2
         myHeadingLabel.textColor = labelBackgroundColor
         self.view.backgroundColor = backgroundColor2
@@ -108,5 +86,29 @@ class FontStylingsViewController: UIViewController, UIPickerViewDataSource, UIPi
             navigationToDoneView.finalLabelFont = UIFont(name: data[currentSelection], size: 45.0)
         }
         
+    }
+    
+    func populateFonts() {
+        
+        var fontFamilies = UIFont.familyNames()
+        var fontNames: [String] = []
+        
+        for i in fontFamilies{
+            var fontNamesForFamilies = UIFont.fontNamesForFamilyName(i as String)
+            for j in fontNamesForFamilies{
+                fontNames.append(j as String)
+            }
+        }
+       
+        data = sorted (fontNames, {(s1: String, s2:String) -> Bool in return s1 < s2 })
+        
+        if currentSelection == nil{
+            for i in 0...(data.count) - 1 {
+                if data[i] == "AppleSDGothicNeo-Light"{
+                    currentSelection = i
+                    break
+                }
+            }
+        }
     }
 }

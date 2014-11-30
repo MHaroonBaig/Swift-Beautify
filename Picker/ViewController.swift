@@ -306,5 +306,4 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             navigationObject.currentSelection = currentSelection2
         }
     }
-    
 }
