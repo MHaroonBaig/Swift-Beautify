@@ -80,8 +80,8 @@ class SideBar: NSObject, SideBarTableViewControllerDelegate {
     func addShadow(anyView: UIView){
         anyView.layer.shadowColor = UIColor.blackColor().CGColor
         anyView.layer.shadowOpacity = 1.0
-        anyView.layer.shadowOffset = CGSize(width: 1.5, height: -2)
-        let beizerPath = UIBezierPath(rect: sideBarContainerView.layer.bounds)
+        anyView.layer.shadowOffset = CGSize(width: 2.0, height: -2)
+        let beizerPath = UIBezierPath(rect: anyView.layer.bounds)
         anyView.layer.shadowPath = beizerPath.CGPath
     }
     
