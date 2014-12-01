@@ -257,7 +257,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView alpha="0.89999999999999991" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="finalImage" translatesAutoresizingMaskIntoConstraints="NO" id="SyB-PL-Jun">
+                            <imageView alpha="0.84999999999999987" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="twitter" translatesAutoresizingMaskIntoConstraints="NO" id="SyB-PL-Jun">
                                 <rect key="frame" x="167" y="251" width="266" height="175"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="266" id="zET-Pe-5fG"/>
@@ -328,7 +328,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="aDc-Sn-iwu">
-                        <barButtonItem key="rightBarButtonItem" title="Get your values" style="done" id="ymV-Q9-QlS">
+                        <barButtonItem key="rightBarButtonItem" title="Grab your values" style="done" id="ymV-Q9-QlS">
                             <connections>
                                 <action selector="valuesRetrieval:" destination="CAb-TE-gOE" id="QfL-tY-DS3"/>
                             </connections>
@@ -366,7 +366,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="finalImage" width="2400" height="2400"/>
+        <image name="twitter" width="1139" height="926"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="sse-Xv-xc0"/>
