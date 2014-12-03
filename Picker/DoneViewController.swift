@@ -100,7 +100,7 @@ class DoneViewController: UIViewController, UIAlertViewDelegate{
         
         alert.addButton("Tweet it") {
             let myHashtag = "\n#Beautify"
-            // println("Text value: \(txt.text)")
+            
             let accountStore = ACAccountStore()
             let accountType = accountStore.accountTypeWithAccountTypeIdentifier(ACAccountTypeIdentifierTwitter)
             accountStore.requestAccessToAccountsWithType(accountType, options: nil){
@@ -121,8 +121,11 @@ class DoneViewController: UIViewController, UIAlertViewDelegate{
                                 self.tweetSuccess = false
                         })
                     }
-                }
+               }
             }
+            var alert = SweetAlert()
+            alert.setColor(self.alertButtonColor)
+            alert.showAlert("Thank You", subTitle: "Your tweet has been sent successfully", style: AlertStyle.Success, buttonTitle: "Ok", buttonColor: self.alertButtonColor, action: nil)
         }
         
         alert.showEdit("Tweet It", subTitle:"Spread the word if you like this app")
